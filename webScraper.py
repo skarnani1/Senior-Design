@@ -16,7 +16,17 @@ def run(playwright: Playwright):
      # other actions...
     soup = BeautifulSoup(page.content(), 'html.parser')
     browser.close()
-    print(soup.prettify())
+    name = soup.find('div', class_='event-cell__name-text')# team
+    line = soup.find('span', class_='sportsbook-outcome-cell__line') #Line
+    odd = soup.find('span', class_='sportsbook-odds american default-color') #odds
+    print(name.get_text())
+    print(line.get_text())
+    print(odd.get_text())
+    print(name.find_next('div', class_='event-cell__name-text').get_text())# team
+    print(line.find_next('span', class_='sportsbook-outcome-cell__line').get_text()) #Line
+    print(odd.find_next('span', class_='sportsbook-odds american default-color').get_text()) #odds
+
+
     
 
 
