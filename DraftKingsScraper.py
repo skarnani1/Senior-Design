@@ -68,7 +68,7 @@ def run(playwright: Playwright):
 
     odds_data.append([Team1.get_text(), '', 'Spread', SpreadLine1.get_text(), SpreadOdd1.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
     odds_data.append([Team1.get_text(), '', 'Total', TotalLabel1.get_text() + TotalLine1.get_text(), TotalOdd1.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
-    odds_data.append([Team1.get_text(), '', 'MoneyLine', ' ', MoneyLine.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
+    odds_data.append([Team1.get_text(), '', 'MoneyLine', Team1.get_text(), MoneyLine.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
 
     while Team1 != None: 
         Team1 = Team1.find_next('div', class_='event-cell__name-text')
@@ -89,7 +89,7 @@ def run(playwright: Playwright):
             #GameDate = GameDate.find_next('div', class_='sportsbook-table-header__title')
             odds_data.append([Team1.get_text(), '', 'Spread', SpreadLine1.get_text(), SpreadOdd1.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
             odds_data.append([Team1.get_text(), '', 'Total', TotalLabel1.get_text() + TotalLine1.get_text(), TotalOdd1.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
-            odds_data.append([Team1.get_text(), '', 'MoneyLine', ' ', MoneyLine.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
+            odds_data.append([Team1.get_text(), '', 'MoneyLine', Team1.get_text(), MoneyLine.get_text(), CurrentGameDate.get_text(), datetime.datetime.now(),'DraftKings', 'NFL'])
 
 
     #team2 = team1.find_next('div', class_='event-cell__name-text')
@@ -98,7 +98,7 @@ def run(playwright: Playwright):
 
 
     odds_df = pd.DataFrame(odds_data, columns=['Team 1', 'Team 2', 'Bet Type', 'Bet Info', 'Odds', 'Date of game', 'DateTime(when got odds)', 'Sportsbook Name', 'Sport'])
-    odds_df.to_csv('nfl_odds_playwright.csv', index=False)
+    odds_df.to_csv('DraftKings_odds_playwright.csv', index=False)
     
     #
 
