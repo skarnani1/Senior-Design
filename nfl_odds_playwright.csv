@@ -1,1 +1,169 @@
-Team 1,Odds 1,Team 2,Odds 2
+Team 1,Team 2,Bet Type,Bet Info,Odds,Date of game,DateTime(when got odds),Sportsbook Name,Sport
+NE Patriots,JAX Jaguars,Spread,+6,−112,Tomorrow ,2024-10-19 11:54:44.027557,DraftKings,NFL
+NE Patriots,JAX Jaguars,Total,O42,−108,Tomorrow ,2024-10-19 11:54:44.027576,DraftKings,NFL
+NE Patriots,JAX Jaguars,MoneyLine, ,+205,Tomorrow ,2024-10-19 11:54:44.027582,DraftKings,NFL
+JAX Jaguars,NE Patriots,Spread,-6,−108,Tomorrow ,2024-10-19 11:54:44.028104,DraftKings,NFL
+JAX Jaguars,NE Patriots,Total,U42,−112,Tomorrow ,2024-10-19 11:54:44.028115,DraftKings,NFL
+JAX Jaguars,NE Patriots,MoneyLine, ,−250,Tomorrow ,2024-10-19 11:54:44.028121,DraftKings,NFL
+PHI Eagles,NY Giants,Spread,-3.5,−105,Tomorrow ,2024-10-19 11:54:44.028614,DraftKings,NFL
+PHI Eagles,NY Giants,Total,O42.5,−112,Tomorrow ,2024-10-19 11:54:44.028622,DraftKings,NFL
+PHI Eagles,NY Giants,MoneyLine, ,−170,Tomorrow ,2024-10-19 11:54:44.028629,DraftKings,NFL
+NY Giants,PHI Eagles,Spread,+3.5,−115,Tomorrow ,2024-10-19 11:54:44.029159,DraftKings,NFL
+NY Giants,PHI Eagles,Total,U42.5,−108,Tomorrow ,2024-10-19 11:54:44.029167,DraftKings,NFL
+NY Giants,PHI Eagles,MoneyLine, ,+142,Tomorrow ,2024-10-19 11:54:44.029173,DraftKings,NFL
+DET Lions,MIN Vikings,Spread,+1.5,−112,Tomorrow ,2024-10-19 11:54:44.029708,DraftKings,NFL
+DET Lions,MIN Vikings,Total,O50.5,−112,Tomorrow ,2024-10-19 11:54:44.029716,DraftKings,NFL
+DET Lions,MIN Vikings,MoneyLine, ,+100,Tomorrow ,2024-10-19 11:54:44.029722,DraftKings,NFL
+MIN Vikings,DET Lions,Spread,-1.5,−108,Tomorrow ,2024-10-19 11:54:44.030264,DraftKings,NFL
+MIN Vikings,DET Lions,Total,U50.5,−108,Tomorrow ,2024-10-19 11:54:44.030275,DraftKings,NFL
+MIN Vikings,DET Lions,MoneyLine, ,−120,Tomorrow ,2024-10-19 11:54:44.030283,DraftKings,NFL
+CIN Bengals,CLE Browns,Spread,-5.5,−112,Tomorrow ,2024-10-19 11:54:44.030805,DraftKings,NFL
+CIN Bengals,CLE Browns,Total,O41.5,−108,Tomorrow ,2024-10-19 11:54:44.030813,DraftKings,NFL
+CIN Bengals,CLE Browns,MoneyLine, ,−230,Tomorrow ,2024-10-19 11:54:44.030821,DraftKings,NFL
+CLE Browns,CIN Bengals,Spread,+5.5,−108,Tomorrow ,2024-10-19 11:54:44.031321,DraftKings,NFL
+CLE Browns,CIN Bengals,Total,U41.5,−112,Tomorrow ,2024-10-19 11:54:44.031329,DraftKings,NFL
+CLE Browns,CIN Bengals,MoneyLine, ,+190,Tomorrow ,2024-10-19 11:54:44.031335,DraftKings,NFL
+TEN Titans,BUF Bills,Spread,+9.5,−112,Tomorrow ,2024-10-19 11:54:44.031820,DraftKings,NFL
+TEN Titans,BUF Bills,Total,O41,−110,Tomorrow ,2024-10-19 11:54:44.031829,DraftKings,NFL
+TEN Titans,BUF Bills,MoneyLine, ,+360,Tomorrow ,2024-10-19 11:54:44.031835,DraftKings,NFL
+BUF Bills,TEN Titans,Spread,-9.5,−108,Tomorrow ,2024-10-19 11:54:44.032323,DraftKings,NFL
+BUF Bills,TEN Titans,Total,U41,−110,Tomorrow ,2024-10-19 11:54:44.032331,DraftKings,NFL
+BUF Bills,TEN Titans,MoneyLine, ,−470,Tomorrow ,2024-10-19 11:54:44.032337,DraftKings,NFL
+HOU Texans,GB Packers,Spread,+3,−118,Tomorrow ,2024-10-19 11:54:44.032840,DraftKings,NFL
+HOU Texans,GB Packers,Total,O48.5,−110,Tomorrow ,2024-10-19 11:54:44.032848,DraftKings,NFL
+HOU Texans,GB Packers,MoneyLine, ,+124,Tomorrow ,2024-10-19 11:54:44.032854,DraftKings,NFL
+GB Packers,HOU Texans,Spread,-3,−102,Tomorrow ,2024-10-19 11:54:44.033407,DraftKings,NFL
+GB Packers,HOU Texans,Total,U48.5,−110,Tomorrow ,2024-10-19 11:54:44.033418,DraftKings,NFL
+GB Packers,HOU Texans,MoneyLine, ,−148,Tomorrow ,2024-10-19 11:54:44.033425,DraftKings,NFL
+SEA Seahawks,ATL Falcons,Spread,+3,−115,Tomorrow ,2024-10-19 11:54:44.033954,DraftKings,NFL
+SEA Seahawks,ATL Falcons,Total,O51.5,−108,Tomorrow ,2024-10-19 11:54:44.033965,DraftKings,NFL
+SEA Seahawks,ATL Falcons,MoneyLine, ,+130,Tomorrow ,2024-10-19 11:54:44.033972,DraftKings,NFL
+ATL Falcons,SEA Seahawks,Spread,-3,−105,Tomorrow ,2024-10-19 11:54:44.034457,DraftKings,NFL
+ATL Falcons,SEA Seahawks,Total,U51.5,−112,Tomorrow ,2024-10-19 11:54:44.034465,DraftKings,NFL
+ATL Falcons,SEA Seahawks,MoneyLine, ,−155,Tomorrow ,2024-10-19 11:54:44.034472,DraftKings,NFL
+MIA Dolphins,IND Colts,Spread,+3,−110,Tomorrow ,2024-10-19 11:54:44.034954,DraftKings,NFL
+MIA Dolphins,IND Colts,Total,O43.5,−112,Tomorrow ,2024-10-19 11:54:44.034962,DraftKings,NFL
+MIA Dolphins,IND Colts,MoneyLine, ,+130,Tomorrow ,2024-10-19 11:54:44.034968,DraftKings,NFL
+IND Colts,MIA Dolphins,Spread,-3,−110,Tomorrow ,2024-10-19 11:54:44.035449,DraftKings,NFL
+IND Colts,MIA Dolphins,Total,U43.5,−108,Tomorrow ,2024-10-19 11:54:44.035456,DraftKings,NFL
+IND Colts,MIA Dolphins,MoneyLine, ,−155,Tomorrow ,2024-10-19 11:54:44.035463,DraftKings,NFL
+CAR Panthers,WAS Commanders,Spread,+9.5,−110,Tomorrow ,2024-10-19 11:54:44.035977,DraftKings,NFL
+CAR Panthers,WAS Commanders,Total,O51.5,−110,Tomorrow ,2024-10-19 11:54:44.035985,DraftKings,NFL
+CAR Panthers,WAS Commanders,MoneyLine, ,+360,Tomorrow ,2024-10-19 11:54:44.035993,DraftKings,NFL
+WAS Commanders,CAR Panthers,Spread,-9.5,−110,Tomorrow ,2024-10-19 11:54:44.036472,DraftKings,NFL
+WAS Commanders,CAR Panthers,Total,U51.5,−110,Tomorrow ,2024-10-19 11:54:44.036481,DraftKings,NFL
+WAS Commanders,CAR Panthers,MoneyLine, ,−470,Tomorrow ,2024-10-19 11:54:44.036487,DraftKings,NFL
+LV Raiders,LA Rams,Spread,+7,−110,Tomorrow ,2024-10-19 11:54:44.036966,DraftKings,NFL
+LV Raiders,LA Rams,Total,O43.5,−108,Tomorrow ,2024-10-19 11:54:44.036976,DraftKings,NFL
+LV Raiders,LA Rams,MoneyLine, ,+275,Tomorrow ,2024-10-19 11:54:44.036983,DraftKings,NFL
+LA Rams,LV Raiders,Spread,-7,−110,Tomorrow ,2024-10-19 11:54:44.037459,DraftKings,NFL
+LA Rams,LV Raiders,Total,U43.5,−112,Tomorrow ,2024-10-19 11:54:44.037469,DraftKings,NFL
+LA Rams,LV Raiders,MoneyLine, ,−345,Tomorrow ,2024-10-19 11:54:44.037476,DraftKings,NFL
+KC Chiefs,SF 49ers,Spread,+2,−112,Tomorrow ,2024-10-19 11:54:44.037973,DraftKings,NFL
+KC Chiefs,SF 49ers,Total,O47,−110,Tomorrow ,2024-10-19 11:54:44.037985,DraftKings,NFL
+KC Chiefs,SF 49ers,MoneyLine, ,+105,Tomorrow ,2024-10-19 11:54:44.037992,DraftKings,NFL
+SF 49ers,KC Chiefs,Spread,-2,−108,Tomorrow ,2024-10-19 11:54:44.038525,DraftKings,NFL
+SF 49ers,KC Chiefs,Total,U47,−110,Tomorrow ,2024-10-19 11:54:44.038536,DraftKings,NFL
+SF 49ers,KC Chiefs,MoneyLine, ,−125,Tomorrow ,2024-10-19 11:54:44.038542,DraftKings,NFL
+NY Jets,PIT Steelers,Spread,-1.5,−112,Tomorrow ,2024-10-19 11:54:44.039013,DraftKings,NFL
+NY Jets,PIT Steelers,Total,O39,−108,Tomorrow ,2024-10-19 11:54:44.039024,DraftKings,NFL
+NY Jets,PIT Steelers,MoneyLine, ,−135,Tomorrow ,2024-10-19 11:54:44.039031,DraftKings,NFL
+PIT Steelers,NY Jets,Spread,+1.5,−108,Tomorrow ,2024-10-19 11:54:44.039539,DraftKings,NFL
+PIT Steelers,NY Jets,Total,U39,−112,Tomorrow ,2024-10-19 11:54:44.039548,DraftKings,NFL
+PIT Steelers,NY Jets,MoneyLine, ,+114,Tomorrow ,2024-10-19 11:54:44.039555,DraftKings,NFL
+BAL Ravens,TB Buccaneers,Spread,-3.5,−108,MON OCT 21ST,2024-10-19 11:54:44.042445,DraftKings,NFL
+BAL Ravens,TB Buccaneers,Total,O49,−112,MON OCT 21ST,2024-10-19 11:54:44.042453,DraftKings,NFL
+BAL Ravens,TB Buccaneers,MoneyLine, ,−180,MON OCT 21ST,2024-10-19 11:54:44.042459,DraftKings,NFL
+TB Buccaneers,BAL Ravens,Spread,+3.5,−112,MON OCT 21ST,2024-10-19 11:54:44.042961,DraftKings,NFL
+TB Buccaneers,BAL Ravens,Total,U49,−108,MON OCT 21ST,2024-10-19 11:54:44.042971,DraftKings,NFL
+TB Buccaneers,BAL Ravens,MoneyLine, ,+150,MON OCT 21ST,2024-10-19 11:54:44.042979,DraftKings,NFL
+LA Chargers,ARI Cardinals,Spread,-2,−108,MON OCT 21ST,2024-10-19 11:54:44.043514,DraftKings,NFL
+LA Chargers,ARI Cardinals,Total,O44,−112,MON OCT 21ST,2024-10-19 11:54:44.043524,DraftKings,NFL
+LA Chargers,ARI Cardinals,MoneyLine, ,−125,MON OCT 21ST,2024-10-19 11:54:44.043530,DraftKings,NFL
+ARI Cardinals,LA Chargers,Spread,+2,−112,MON OCT 21ST,2024-10-19 11:54:44.044067,DraftKings,NFL
+ARI Cardinals,LA Chargers,Total,U44,−108,MON OCT 21ST,2024-10-19 11:54:44.044077,DraftKings,NFL
+ARI Cardinals,LA Chargers,MoneyLine, ,+105,MON OCT 21ST,2024-10-19 11:54:44.044084,DraftKings,NFL
+MIN Vikings,LA Rams,Spread,-3,−110,THU OCT 24TH,2024-10-19 11:54:44.045236,DraftKings,NFL
+MIN Vikings,LA Rams,Total,O46,−110,THU OCT 24TH,2024-10-19 11:54:44.045246,DraftKings,NFL
+MIN Vikings,LA Rams,MoneyLine, ,−155,THU OCT 24TH,2024-10-19 11:54:44.045252,DraftKings,NFL
+LA Rams,MIN Vikings,Spread,+3,−110,THU OCT 24TH,2024-10-19 11:54:44.045757,DraftKings,NFL
+LA Rams,MIN Vikings,Total,U46,−110,THU OCT 24TH,2024-10-19 11:54:44.045764,DraftKings,NFL
+LA Rams,MIN Vikings,MoneyLine, ,+130,THU OCT 24TH,2024-10-19 11:54:44.045769,DraftKings,NFL
+BAL Ravens,CLE Browns,Spread,-9.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.046720,DraftKings,NFL
+BAL Ravens,CLE Browns,Total,O43,−110,SUN OCT 27TH,2024-10-19 11:54:44.046728,DraftKings,NFL
+BAL Ravens,CLE Browns,MoneyLine, ,−485,SUN OCT 27TH,2024-10-19 11:54:44.046733,DraftKings,NFL
+CLE Browns,BAL Ravens,Spread,+9.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.047220,DraftKings,NFL
+CLE Browns,BAL Ravens,Total,U43,−110,SUN OCT 27TH,2024-10-19 11:54:44.047229,DraftKings,NFL
+CLE Browns,BAL Ravens,MoneyLine, ,+370,SUN OCT 27TH,2024-10-19 11:54:44.047234,DraftKings,NFL
+TEN Titans,DET Lions,Spread,+9.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.047714,DraftKings,NFL
+TEN Titans,DET Lions,Total,O45,−110,SUN OCT 27TH,2024-10-19 11:54:44.047724,DraftKings,NFL
+TEN Titans,DET Lions,MoneyLine, ,+370,SUN OCT 27TH,2024-10-19 11:54:44.047730,DraftKings,NFL
+DET Lions,TEN Titans,Spread,-9.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.048284,DraftKings,NFL
+DET Lions,TEN Titans,Total,U45,−110,SUN OCT 27TH,2024-10-19 11:54:44.048292,DraftKings,NFL
+DET Lions,TEN Titans,MoneyLine, ,−485,SUN OCT 27TH,2024-10-19 11:54:44.048298,DraftKings,NFL
+GB Packers,JAX Jaguars,Spread,-4,−110,SUN OCT 27TH,2024-10-19 11:54:44.048779,DraftKings,NFL
+GB Packers,JAX Jaguars,Total,O48,−110,SUN OCT 27TH,2024-10-19 11:54:44.048788,DraftKings,NFL
+GB Packers,JAX Jaguars,MoneyLine, ,−205,SUN OCT 27TH,2024-10-19 11:54:44.048793,DraftKings,NFL
+JAX Jaguars,GB Packers,Spread,+4,−110,SUN OCT 27TH,2024-10-19 11:54:44.049271,DraftKings,NFL
+JAX Jaguars,GB Packers,Total,U48,−110,SUN OCT 27TH,2024-10-19 11:54:44.049281,DraftKings,NFL
+JAX Jaguars,GB Packers,MoneyLine, ,+170,SUN OCT 27TH,2024-10-19 11:54:44.049287,DraftKings,NFL
+IND Colts,HOU Texans,Spread,+5.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.049772,DraftKings,NFL
+IND Colts,HOU Texans,Total,O47.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.049782,DraftKings,NFL
+IND Colts,HOU Texans,MoneyLine, ,+200,SUN OCT 27TH,2024-10-19 11:54:44.049788,DraftKings,NFL
+HOU Texans,IND Colts,Spread,-5.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.050270,DraftKings,NFL
+HOU Texans,IND Colts,Total,U47.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.050280,DraftKings,NFL
+HOU Texans,IND Colts,MoneyLine, ,−245,SUN OCT 27TH,2024-10-19 11:54:44.050287,DraftKings,NFL
+ATL Falcons,TB Buccaneers,Spread,+1.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.050778,DraftKings,NFL
+ATL Falcons,TB Buccaneers,Total,O48,−110,SUN OCT 27TH,2024-10-19 11:54:44.050786,DraftKings,NFL
+ATL Falcons,TB Buccaneers,MoneyLine, ,+105,SUN OCT 27TH,2024-10-19 11:54:44.050792,DraftKings,NFL
+TB Buccaneers,ATL Falcons,Spread,-1.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.051271,DraftKings,NFL
+TB Buccaneers,ATL Falcons,Total,U48,−110,SUN OCT 27TH,2024-10-19 11:54:44.051280,DraftKings,NFL
+TB Buccaneers,ATL Falcons,MoneyLine, ,−125,SUN OCT 27TH,2024-10-19 11:54:44.051285,DraftKings,NFL
+PHI Eagles,CIN Bengals,Spread,+2.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.051765,DraftKings,NFL
+PHI Eagles,CIN Bengals,Total,O48.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.051776,DraftKings,NFL
+PHI Eagles,CIN Bengals,MoneyLine, ,+114,SUN OCT 27TH,2024-10-19 11:54:44.051782,DraftKings,NFL
+CIN Bengals,PHI Eagles,Spread,-2.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.052263,DraftKings,NFL
+CIN Bengals,PHI Eagles,Total,U48.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.052271,DraftKings,NFL
+CIN Bengals,PHI Eagles,MoneyLine, ,−135,SUN OCT 27TH,2024-10-19 11:54:44.052276,DraftKings,NFL
+NY Jets,NE Patriots,Spread,-6.5,−120,SUN OCT 27TH,2024-10-19 11:54:44.052754,DraftKings,NFL
+NY Jets,NE Patriots,Total,O40,−110,SUN OCT 27TH,2024-10-19 11:54:44.052763,DraftKings,NFL
+NY Jets,NE Patriots,MoneyLine, ,−298,SUN OCT 27TH,2024-10-19 11:54:44.052770,DraftKings,NFL
+NE Patriots,NY Jets,Spread,+6.5,+100,SUN OCT 27TH,2024-10-19 11:54:44.053243,DraftKings,NFL
+NE Patriots,NY Jets,Total,U40,−110,SUN OCT 27TH,2024-10-19 11:54:44.053253,DraftKings,NFL
+NE Patriots,NY Jets,MoneyLine, ,+240,SUN OCT 27TH,2024-10-19 11:54:44.053259,DraftKings,NFL
+ARI Cardinals,MIA Dolphins,Spread,+2.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.053741,DraftKings,NFL
+ARI Cardinals,MIA Dolphins,Total,O47.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.053749,DraftKings,NFL
+ARI Cardinals,MIA Dolphins,MoneyLine, ,+114,SUN OCT 27TH,2024-10-19 11:54:44.053754,DraftKings,NFL
+MIA Dolphins,ARI Cardinals,Spread,-2.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.054245,DraftKings,NFL
+MIA Dolphins,ARI Cardinals,Total,U47.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.054255,DraftKings,NFL
+MIA Dolphins,ARI Cardinals,MoneyLine, ,−135,SUN OCT 27TH,2024-10-19 11:54:44.054262,DraftKings,NFL
+BUF Bills,SEA Seahawks,Spread,-3,−105,SUN OCT 27TH,2024-10-19 11:54:44.054795,DraftKings,NFL
+BUF Bills,SEA Seahawks,Total,O48,−110,SUN OCT 27TH,2024-10-19 11:54:44.054803,DraftKings,NFL
+BUF Bills,SEA Seahawks,MoneyLine, ,−155,SUN OCT 27TH,2024-10-19 11:54:44.054808,DraftKings,NFL
+SEA Seahawks,BUF Bills,Spread,+3,−115,SUN OCT 27TH,2024-10-19 11:54:44.055324,DraftKings,NFL
+SEA Seahawks,BUF Bills,Total,U48,−110,SUN OCT 27TH,2024-10-19 11:54:44.055334,DraftKings,NFL
+SEA Seahawks,BUF Bills,MoneyLine, ,+130,SUN OCT 27TH,2024-10-19 11:54:44.055340,DraftKings,NFL
+KC Chiefs,LV Raiders,Spread,-9.5,−112,SUN OCT 27TH,2024-10-19 11:54:44.055815,DraftKings,NFL
+KC Chiefs,LV Raiders,Total,O43.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.055824,DraftKings,NFL
+KC Chiefs,LV Raiders,MoneyLine, ,−485,SUN OCT 27TH,2024-10-19 11:54:44.055831,DraftKings,NFL
+LV Raiders,KC Chiefs,Spread,+9.5,−108,SUN OCT 27TH,2024-10-19 11:54:44.056291,DraftKings,NFL
+LV Raiders,KC Chiefs,Total,U43.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.056300,DraftKings,NFL
+LV Raiders,KC Chiefs,MoneyLine, ,+370,SUN OCT 27TH,2024-10-19 11:54:44.056306,DraftKings,NFL
+CHI Bears,WAS Commanders,Spread,+1.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.056782,DraftKings,NFL
+CHI Bears,WAS Commanders,Total,O47,−110,SUN OCT 27TH,2024-10-19 11:54:44.056790,DraftKings,NFL
+CHI Bears,WAS Commanders,MoneyLine, ,+105,SUN OCT 27TH,2024-10-19 11:54:44.056796,DraftKings,NFL
+WAS Commanders,CHI Bears,Spread,-1.5,−110,SUN OCT 27TH,2024-10-19 11:54:44.057260,DraftKings,NFL
+WAS Commanders,CHI Bears,Total,U47,−110,SUN OCT 27TH,2024-10-19 11:54:44.057269,DraftKings,NFL
+WAS Commanders,CHI Bears,MoneyLine, ,−125,SUN OCT 27TH,2024-10-19 11:54:44.057275,DraftKings,NFL
+DAL Cowboys,SF 49ers,Spread,+7,−105,SUN OCT 27TH,2024-10-19 11:54:44.057810,DraftKings,NFL
+DAL Cowboys,SF 49ers,Total,O49,−110,SUN OCT 27TH,2024-10-19 11:54:44.057820,DraftKings,NFL
+DAL Cowboys,SF 49ers,MoneyLine, ,+270,SUN OCT 27TH,2024-10-19 11:54:44.057837,DraftKings,NFL
+SF 49ers,DAL Cowboys,Spread,-7,−115,SUN OCT 27TH,2024-10-19 11:54:44.058389,DraftKings,NFL
+SF 49ers,DAL Cowboys,Total,U49,−110,SUN OCT 27TH,2024-10-19 11:54:44.058399,DraftKings,NFL
+SF 49ers,DAL Cowboys,MoneyLine, ,−340,SUN OCT 27TH,2024-10-19 11:54:44.058406,DraftKings,NFL
+NY Giants,PIT Steelers,Spread,+3.5,−115,MON OCT 28TH,2024-10-19 11:54:44.061160,DraftKings,NFL
+NY Giants,PIT Steelers,Total,O37.5,−110,MON OCT 28TH,2024-10-19 11:54:44.061171,DraftKings,NFL
+NY Giants,PIT Steelers,MoneyLine, ,+145,MON OCT 28TH,2024-10-19 11:54:44.061177,DraftKings,NFL
+PIT Steelers,NY Giants,Spread,-3.5,−105,MON OCT 28TH,2024-10-19 11:54:44.061673,DraftKings,NFL
+PIT Steelers,NY Giants,Total,U37.5,−110,MON OCT 28TH,2024-10-19 11:54:44.061681,DraftKings,NFL
+PIT Steelers,NY Giants,MoneyLine, ,−175,MON OCT 28TH,2024-10-19 11:54:44.061685,DraftKings,NFL
