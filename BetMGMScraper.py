@@ -38,18 +38,20 @@ def run(playwright: Playwright):
         team_b = participants[i + 1].get_text().strip()  # Team 2
 
         if i < len(odds_blocks):
+            if (i == 1):
+                print(odds_blocks[1])
             # Spread values and odds
-            spread_value_a = odds_blocks[i].find('span', class_='option-attribute ng-star-inserted')
+            spread_value_a = odds_blocks[i].find('div', class_='option-attribute ng-star-inserted')
             spread_odds_a = odds_blocks[i].find('span', class_='custom-odds-value-style ng-star-inserted')
 
-            spread_value_b = odds_blocks[i + 1].find('span', class_='option-attribute ng-star-inserted')
+            spread_value_b = odds_blocks[i + 1].find('div', class_='option-attribute ng-star-inserted')
             spread_odds_b = odds_blocks[i + 1].find('span', class_='custom-odds-value-style ng-star-inserted')
 
             # Total values and odds
-            total_value_a = odds_blocks[i].find('span', class_='option-attribute option-group-attribute ng-star-inserted')
+            total_value_a = odds_blocks[i].find('div', class_='option-attribute option-group-attribute ng-star-inserted')
             total_odds_a = odds_blocks[i].find('span', class_='custom-odds-value-style ng-star-inserted')
 
-            total_value_b = odds_blocks[i + 1].find('span', class_='option-attribute option-group-attribute ng-star-inserted')
+            total_value_b = odds_blocks[i + 1].find('div', class_='option-attribute option-group-attribute ng-star-inserted')
             total_odds_b = odds_blocks[i + 1].find('span', class_='custom-odds-value-style ng-star-inserted')
 
             # Moneyline odds
