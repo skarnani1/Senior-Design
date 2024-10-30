@@ -10,7 +10,7 @@ def run(playwright: Playwright):
     page.goto("https://sports.pa.betmgm.com/en/sports/football-11/betting/usa-9/nfl-35")
 
     # Wait for the main grid container to ensure content is loaded
-    page.wait_for_selector('.grid-group-container', timeout=20000)
+    page.wait_for_selector('.grid-event.grid-six-pack-event.ms-active-highlight.two-lined-name.ng-star-inserted', timeout=20000)
 
     # Get the full page content
     html = page.content()
@@ -22,71 +22,60 @@ def run(playwright: Playwright):
     # Initialize data storage
     odds_data = []
 
-    # Find all participants (team names)
-    participants = soup.find_all('div', class_='participant')
+    # Find each game container
+    games = soup.find_all('ms-six-pack-event', class_='grid-event grid-six-pack-event ms-active-highlight two-lined-name ng-star-inserted')
 
-    if not participants:
-        print("No participants found.")
-        return
+    for game in games:
+        # Extract team names
+        participants = game.find_all('div', class_='participant')
+        if len(participants) < 2:
+            continue  # Skip if we don't find both teams
 
-    # Find all odds blocks
-    odds_blocks = soup.find_all('div', class_='option-indicator')
+        team_a = participants[0].get_text().strip()
+        team_b = participants[1].get_text().strip()
 
-    # Loop through each participant block (team names)
-    for i in range(0, len(participants), 2):  # Assuming two participants per game
-        team_a = participants[i].get_text().strip()  # Team 1
-        team_b = participants[i + 1].get_text().strip()  # Team 2
+        # Extract all custom-odds-value-style spans to check order
+        odds_spans = game.find_all('span', class_='custom-odds-value-style ng-star-inserted')
 
-        if i < len(odds_blocks):
-            if (i == 1):
-                print(odds_blocks[1])
+        # Spread, Total, Moneyline information with corrected indexing
+        try:
             # Spread values and odds
-            spread_value_a = odds_blocks[i].find('div', class_='option-attribute ng-star-inserted')
-            spread_odds_a = odds_blocks[i].find('span', class_='custom-odds-value-style ng-star-inserted')
+            spread_line_a = game.find_all('div', class_='option-attribute ng-star-inserted')[0].get_text().strip()
+            spread_odds_a = odds_spans[0].get_text().strip()
 
-            spread_value_b = odds_blocks[i + 1].find('div', class_='option-attribute ng-star-inserted')
-            spread_odds_b = odds_blocks[i + 1].find('span', class_='custom-odds-value-style ng-star-inserted')
+            spread_line_b = game.find_all('div', class_='option-attribute ng-star-inserted')[1].get_text().strip()
+            spread_odds_b = odds_spans[1].get_text().strip()
 
             # Total values and odds
-            total_value_a = odds_blocks[i].find('div', class_='option-attribute option-group-attribute ng-star-inserted')
-            total_odds_a = odds_blocks[i].find('span', class_='custom-odds-value-style ng-star-inserted')
+            total_line_a = game.find_all('div', class_='option-attribute option-group-attribute ng-star-inserted')[0].get_text().strip()
+            total_odds_a = odds_spans[3].get_text().strip()
 
-            total_value_b = odds_blocks[i + 1].find('div', class_='option-attribute option-group-attribute ng-star-inserted')
-            total_odds_b = odds_blocks[i + 1].find('span', class_='custom-odds-value-style ng-star-inserted')
+            total_line_b = game.find_all('div', class_='option-attribute option-group-attribute ng-star-inserted')[1].get_text().strip()
+            total_odds_b = odds_spans[4].get_text().strip()
 
             # Moneyline odds
-            moneyline_a = odds_blocks[i].find('span', class_='custom-odds-value-style ng-star-inserted')
-            moneyline_b = odds_blocks[i + 1].find('span', class_='custom-odds-value-style ng-star-inserted')
+            moneyline_a = odds_spans[5].get_text().strip()
+            moneyline_b = odds_spans[6].get_text().strip()
 
-            # Clean up the text or assign 'N/A' if not found
-            spread_value_a = spread_value_a.get_text().strip() if spread_value_a else "N/A"
-            spread_odds_a = spread_odds_a.get_text().strip() if spread_odds_a else "N/A"
+        except IndexError as e:
+            print("Index Error: Not enough odds data found for one or more bet types in this game.")
+            print(f"Error details: {e}")
+            continue
 
-            spread_value_b = spread_value_b.get_text().strip() if spread_value_b else "N/A"
-            spread_odds_b = spread_odds_b.get_text().strip() if spread_odds_b else "N/A"
+        # Append data for Team A
+        odds_data.append([team_a, team_b, 'Spread', spread_line_a, spread_odds_a, datetime.datetime.now(), 'BetMGM', 'NFL'])
+        odds_data.append([team_a, team_b, 'Total', total_line_a, total_odds_a, datetime.datetime.now(), 'BetMGM', 'NFL'])
+        odds_data.append([team_a, team_b, 'MoneyLine', '', moneyline_a, datetime.datetime.now(), 'BetMGM', 'NFL'])
 
-            total_value_a = total_value_a.get_text().strip() if total_value_a else "N/A"
-            total_odds_a = total_odds_a.get_text().strip() if total_odds_a else "N/A"
-
-            total_value_b = total_value_b.get_text().strip() if total_value_b else "N/A"
-            total_odds_b = total_odds_b.get_text().strip() if total_odds_b else "N/A"
-
-            moneyline_a = moneyline_a.get_text().strip() if moneyline_a else "N/A"
-            moneyline_b = moneyline_b.get_text().strip() if moneyline_b else "N/A"
-
-            # Append Team A data
-            odds_data.append([team_a, team_b, 'Spread', spread_value_a, spread_odds_a, datetime.datetime.now(), 'BetMGM', 'NFL'])
-            odds_data.append([team_a, team_b, 'Total', total_value_a, total_odds_a, datetime.datetime.now(), 'BetMGM', 'NFL'])
-            odds_data.append([team_a, team_b, 'MoneyLine', '', moneyline_a, datetime.datetime.now(), 'BetMGM', 'NFL'])
-
-            # Append Team B data
-            odds_data.append([team_b, team_a, 'Spread', spread_value_b, spread_odds_b, datetime.datetime.now(), 'BetMGM', 'NFL'])
-            odds_data.append([team_b, team_a, 'Total', total_value_b, total_odds_b, datetime.datetime.now(), 'BetMGM', 'NFL'])
-            odds_data.append([team_b, team_a, 'MoneyLine', '', moneyline_b, datetime.datetime.now(), 'BetMGM', 'NFL'])
+        # Append data for Team B
+        odds_data.append([team_b, team_a, 'Spread', spread_line_b, spread_odds_b, datetime.datetime.now(), 'BetMGM', 'NFL'])
+        odds_data.append([team_b, team_a, 'Total', total_line_b, total_odds_b, datetime.datetime.now(), 'BetMGM', 'NFL'])
+        odds_data.append([team_b, team_a, 'MoneyLine', '', moneyline_b, datetime.datetime.now(), 'BetMGM', 'NFL'])
 
     # Create DataFrame and export to CSV
     odds_df = pd.DataFrame(odds_data, columns=['Team 1', 'Team 2', 'Bet Type', 'Bet Info', 'Odds', 'DateTime', 'Sportsbook Name', 'Sport'])
     odds_df.to_csv('BetMGM_odds_playwright.csv', index=False)
+    print("Data extraction complete and saved to CSV.")
 
 with sync_playwright() as playwright:
     run(playwright)
