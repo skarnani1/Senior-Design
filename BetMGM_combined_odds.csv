@@ -1,127 +1,169 @@
-Team 1,Team 2,Bet Type,Bet Info,Odds,DateTime,Sportsbook Name,Sport
-Cowboys,Falcons,Spread,+3,-105,2024-11-02 23:07:16.297008,BetMGM,NFL
-Cowboys,Falcons,Total (Over),O 52,-110,2024-11-02 23:07:16.297014,BetMGM,NFL
-Cowboys,Falcons,MoneyLine,,+140,2024-11-02 23:07:16.297015,BetMGM,NFL
-Falcons,Cowboys,Spread,-3,-115,2024-11-02 23:07:16.297016,BetMGM,NFL
-Falcons,Cowboys,Total (Under),U 52,-110,2024-11-02 23:07:16.297016,BetMGM,NFL
-Falcons,Cowboys,MoneyLine,,-165,2024-11-02 23:07:16.297017,BetMGM,NFL
-Raiders,Bengals,Spread,+7,-110,2024-11-02 23:07:16.298218,BetMGM,NFL
-Raiders,Bengals,Total (Over),O 45.5,-110,2024-11-02 23:07:16.298219,BetMGM,NFL
-Raiders,Bengals,MoneyLine,,+280,2024-11-02 23:07:16.298220,BetMGM,NFL
-Bengals,Raiders,Spread,-7,-110,2024-11-02 23:07:16.298221,BetMGM,NFL
-Bengals,Raiders,Total (Under),U 45.5,-110,2024-11-02 23:07:16.298221,BetMGM,NFL
-Bengals,Raiders,MoneyLine,,-350,2024-11-02 23:07:16.298222,BetMGM,NFL
-Chargers,Browns,Spread,-1.5,-110,2024-11-02 23:07:16.299407,BetMGM,NFL
-Chargers,Browns,Total (Over),O 42.5,-110,2024-11-02 23:07:16.299407,BetMGM,NFL
-Chargers,Browns,MoneyLine,,-125,2024-11-02 23:07:16.299408,BetMGM,NFL
-Browns,Chargers,Spread,+1.5,-110,2024-11-02 23:07:16.299408,BetMGM,NFL
-Browns,Chargers,Total (Under),U 42.5,-110,2024-11-02 23:07:16.299409,BetMGM,NFL
-Browns,Chargers,MoneyLine,,+105,2024-11-02 23:07:16.299410,BetMGM,NFL
-Patriots,Titans,Spread,+3,-105,2024-11-02 23:07:16.300591,BetMGM,NFL
-Patriots,Titans,Total (Over),O 38.5,-110,2024-11-02 23:07:16.300592,BetMGM,NFL
-Patriots,Titans,MoneyLine,,+135,2024-11-02 23:07:16.300593,BetMGM,NFL
-Titans,Patriots,Spread,-3,-115,2024-11-02 23:07:16.300619,BetMGM,NFL
-Titans,Patriots,Total (Under),U 38.5,-110,2024-11-02 23:07:16.300624,BetMGM,NFL
-Titans,Patriots,MoneyLine,,-160,2024-11-02 23:07:16.300625,BetMGM,NFL
-Commanders,Giants,Spread,-4,-110,2024-11-02 23:07:16.301868,BetMGM,NFL
-Commanders,Giants,Total (Over),O 44.5,-110,2024-11-02 23:07:16.301870,BetMGM,NFL
-Commanders,Giants,MoneyLine,,-210,2024-11-02 23:07:16.301870,BetMGM,NFL
-Giants,Commanders,Spread,+4,-110,2024-11-02 23:07:16.301871,BetMGM,NFL
-Giants,Commanders,Total (Under),U 44.5,-110,2024-11-02 23:07:16.301871,BetMGM,NFL
-Giants,Commanders,MoneyLine,,+170,2024-11-02 23:07:16.301872,BetMGM,NFL
-Saints,Panthers,Spread,-7,-115,2024-11-02 23:07:16.303057,BetMGM,NFL
-Saints,Panthers,Total (Over),O 43.5,-110,2024-11-02 23:07:16.303058,BetMGM,NFL
-Saints,Panthers,MoneyLine,,-350,2024-11-02 23:07:16.303058,BetMGM,NFL
-Panthers,Saints,Spread,+7,-105,2024-11-02 23:07:16.303059,BetMGM,NFL
-Panthers,Saints,Total (Under),U 43.5,-110,2024-11-02 23:07:16.303060,BetMGM,NFL
-Panthers,Saints,MoneyLine,,+275,2024-11-02 23:07:16.303060,BetMGM,NFL
-Broncos,Ravens,Spread,+9.5,-110,2024-11-02 23:07:16.304238,BetMGM,NFL
-Broncos,Ravens,Total (Over),O 46.5,-110,2024-11-02 23:07:16.304239,BetMGM,NFL
-Broncos,Ravens,MoneyLine,,+375,2024-11-02 23:07:16.304239,BetMGM,NFL
-Ravens,Broncos,Spread,-9.5,-110,2024-11-02 23:07:16.304240,BetMGM,NFL
-Ravens,Broncos,Total (Under),U 46.5,-110,2024-11-02 23:07:16.304240,BetMGM,NFL
-Ravens,Broncos,MoneyLine,,-500,2024-11-02 23:07:16.304241,BetMGM,NFL
-Dolphins,Bills,Spread,+6,-110,2024-11-02 23:07:16.305553,BetMGM,NFL
-Dolphins,Bills,Total (Over),O 49.5,-110,2024-11-02 23:07:16.305553,BetMGM,NFL
-Dolphins,Bills,MoneyLine,,+220,2024-11-02 23:07:16.305554,BetMGM,NFL
-Bills,Dolphins,Spread,-6,-120,2024-11-02 23:07:16.305554,BetMGM,NFL
-Bills,Dolphins,Total (Under),U 49.5,-110,2024-11-02 23:07:16.305555,BetMGM,NFL
-Bills,Dolphins,MoneyLine,,-275,2024-11-02 23:07:16.305555,BetMGM,NFL
-Jaguars,Eagles,Spread,+7.5,-115,2024-11-02 23:07:16.306746,BetMGM,NFL
-Jaguars,Eagles,Total (Over),O 46,-110,2024-11-02 23:07:16.306747,BetMGM,NFL
-Jaguars,Eagles,MoneyLine,,+280,2024-11-02 23:07:16.306747,BetMGM,NFL
-Eagles,Jaguars,Spread,-7.5,-105,2024-11-02 23:07:16.306748,BetMGM,NFL
-Eagles,Jaguars,Total (Under),U 46,-110,2024-11-02 23:07:16.306748,BetMGM,NFL
-Eagles,Jaguars,MoneyLine,,-350,2024-11-02 23:07:16.306749,BetMGM,NFL
-Bears,Cardinals,Spread,+1.5,-110,2024-11-02 23:07:16.307949,BetMGM,NFL
-Bears,Cardinals,Total (Over),O 44.5,-110,2024-11-02 23:07:16.307950,BetMGM,NFL
-Bears,Cardinals,MoneyLine,,+105,2024-11-02 23:07:16.307951,BetMGM,NFL
-Cardinals,Bears,Spread,-1.5,-110,2024-11-02 23:07:16.307951,BetMGM,NFL
-Cardinals,Bears,Total (Under),U 44.5,-110,2024-11-02 23:07:16.307952,BetMGM,NFL
-Cardinals,Bears,MoneyLine,,-125,2024-11-02 23:07:16.307952,BetMGM,NFL
-Lions,Packers,Spread,-2.5,-115,2024-11-02 23:07:16.309135,BetMGM,NFL
-Lions,Packers,Total (Over),O 47.5,-110,2024-11-02 23:07:16.309136,BetMGM,NFL
-Lions,Packers,MoneyLine,,-140,2024-11-02 23:07:16.309136,BetMGM,NFL
-Packers,Lions,Spread,+2.5,-105,2024-11-02 23:07:16.309137,BetMGM,NFL
-Packers,Lions,Total (Under),U 47.5,-110,2024-11-02 23:07:16.309137,BetMGM,NFL
-Packers,Lions,MoneyLine,,+120,2024-11-02 23:07:16.309141,BetMGM,NFL
-Rams,Seahawks,Spread,-1.5,-110,2024-11-02 23:07:16.310330,BetMGM,NFL
-Rams,Seahawks,Total (Over),O 48,-110,2024-11-02 23:07:16.310330,BetMGM,NFL
-Rams,Seahawks,MoneyLine,,-125,2024-11-02 23:07:16.310331,BetMGM,NFL
-Seahawks,Rams,Spread,+1.5,-110,2024-11-02 23:07:16.310331,BetMGM,NFL
-Seahawks,Rams,Total (Under),U 48,-110,2024-11-02 23:07:16.310332,BetMGM,NFL
-Seahawks,Rams,MoneyLine,,+105,2024-11-02 23:07:16.310332,BetMGM,NFL
-Colts,Vikings,Spread,+5.5,-115,2024-11-02 23:07:16.311555,BetMGM,NFL
-Colts,Vikings,Total (Over),O 46.5,-110,2024-11-02 23:07:16.311556,BetMGM,NFL
-Colts,Vikings,MoneyLine,,+200,2024-11-02 23:07:16.311556,BetMGM,NFL
-Vikings,Colts,Spread,-5.5,-105,2024-11-02 23:07:16.311557,BetMGM,NFL
-Vikings,Colts,Total (Under),U 46.5,-110,2024-11-02 23:07:16.311557,BetMGM,NFL
-Vikings,Colts,MoneyLine,,-250,2024-11-02 23:07:16.311559,BetMGM,NFL
-Buccaneers,Chiefs,Spread,+9.5,-110,2024-11-02 23:07:16.312778,BetMGM,NFL
-Buccaneers,Chiefs,Total (Over),O 45.5,-110,2024-11-02 23:07:16.312778,BetMGM,NFL
-Buccaneers,Chiefs,MoneyLine,,+375,2024-11-02 23:07:16.312779,BetMGM,NFL
-Chiefs,Buccaneers,Spread,-9.5,-110,2024-11-02 23:07:16.312779,BetMGM,NFL
-Chiefs,Buccaneers,Total (Under),U 45.5,-110,2024-11-02 23:07:16.312780,BetMGM,NFL
-Chiefs,Buccaneers,MoneyLine,,-500,2024-11-02 23:07:16.312780,BetMGM,NFL
-Heat,Wizards,Spread,-15.5,-110,2024-11-02 23:07:18.551439,BetMGM,NBA
-Heat,Wizards,Total (Over),O 216.5,-110,2024-11-02 23:07:18.551447,BetMGM,NBA
-Heat,Wizards,MoneyLine,,-5000,2024-11-02 23:07:18.551448,BetMGM,NBA
-Wizards,Heat,Spread,+15.5,-120,2024-11-02 23:07:18.551452,BetMGM,NBA
-Wizards,Heat,Total (Under),U 216.5,-120,2024-11-02 23:07:18.551453,BetMGM,NBA
-Wizards,Heat,MoneyLine,,+1300,2024-11-02 23:07:18.551454,BetMGM,NBA
-Trail Blazers,Suns,Spread,+4.5,-110,2024-11-02 23:07:18.552651,BetMGM,NBA
-Trail Blazers,Suns,Total (Over),O 203.5,-110,2024-11-02 23:07:18.552651,BetMGM,NBA
-Trail Blazers,Suns,MoneyLine,,+190,2024-11-02 23:07:18.552652,BetMGM,NBA
-Suns,Trail Blazers,Spread,-4.5,-120,2024-11-02 23:07:18.552653,BetMGM,NBA
-Suns,Trail Blazers,Total (Under),U 203.5,-120,2024-11-02 23:07:18.552653,BetMGM,NBA
-Suns,Trail Blazers,MoneyLine,,-250,2024-11-02 23:07:18.552654,BetMGM,NBA
-Jazz,Nuggets,Spread,+12.5,-115,2024-11-02 23:07:18.553838,BetMGM,NBA
-Jazz,Nuggets,Total (Over),O 230.5,-115,2024-11-02 23:07:18.553839,BetMGM,NBA
-Jazz,Nuggets,MoneyLine,,+650,2024-11-02 23:07:18.553840,BetMGM,NBA
-Nuggets,Jazz,Spread,-12.5,-115,2024-11-02 23:07:18.553840,BetMGM,NBA
-Nuggets,Jazz,Total (Under),U 230.5,-115,2024-11-02 23:07:18.553841,BetMGM,NBA
-Nuggets,Jazz,MoneyLine,,-1200,2024-11-02 23:07:18.553841,BetMGM,NBA
-Thunder,Clippers,Spread,+1.5,-115,2024-11-02 23:07:18.555035,BetMGM,NBA
-Thunder,Clippers,Total (Over),O 218.5,-110,2024-11-02 23:07:18.555036,BetMGM,NBA
-Thunder,Clippers,MoneyLine,,+105,2024-11-02 23:07:18.555036,BetMGM,NBA
-Clippers,Thunder,Spread,-1.5,-110,2024-11-02 23:07:18.555037,BetMGM,NBA
-Clippers,Thunder,Total (Under),U 218.5,-120,2024-11-02 23:07:18.555037,BetMGM,NBA
-Clippers,Thunder,MoneyLine,,-135,2024-11-02 23:07:18.555038,BetMGM,NBA
-Pistons,Nets,Spread,+3.5,-110,2024-11-02 23:07:18.556227,BetMGM,NBA
-Pistons,Nets,Total (Over),O 219.5,-110,2024-11-02 23:07:18.556227,BetMGM,NBA
-Pistons,Nets,MoneyLine,,+135,2024-11-02 23:07:18.556228,BetMGM,NBA
-Nets,Pistons,Spread,-3.5,-110,2024-11-02 23:07:18.556229,BetMGM,NBA
-Nets,Pistons,Total (Under),U 219.5,-110,2024-11-02 23:07:18.556229,BetMGM,NBA
-Nets,Pistons,MoneyLine,,-165,2024-11-02 23:07:18.556230,BetMGM,NBA
-Hawks,Pelicans,Spread,+4.5,-110,2024-11-02 23:07:18.557519,BetMGM,NBA
-Hawks,Pelicans,Total (Over),O 229.5,-115,2024-11-02 23:07:18.557522,BetMGM,NBA
-Hawks,Pelicans,MoneyLine,,+155,2024-11-02 23:07:18.557522,BetMGM,NBA
-Pelicans,Hawks,Spread,-4.5,-110,2024-11-02 23:07:18.557523,BetMGM,NBA
-Pelicans,Hawks,Total (Under),U 229.5,-105,2024-11-02 23:07:18.557524,BetMGM,NBA
-Pelicans,Hawks,MoneyLine,,-190,2024-11-02 23:07:18.557524,BetMGM,NBA
-Magic,Mavericks,Spread,+7.5,-105,2024-11-02 23:07:18.558699,BetMGM,NBA
-Magic,Mavericks,Total (Over),O 220.5,-110,2024-11-02 23:07:18.558700,BetMGM,NBA
-Magic,Mavericks,MoneyLine,,+240,2024-11-02 23:07:18.558700,BetMGM,NBA
-Mavericks,Magic,Spread,-7.5,-115,2024-11-02 23:07:18.558701,BetMGM,NBA
-Mavericks,Magic,Total (Under),U 220.5,-110,2024-11-02 23:07:18.558701,BetMGM,NBA
-Mavericks,Magic,MoneyLine,,-300,2024-11-02 23:07:18.558702,BetMGM,NBA
+Team 1,Team 2,Bet Type,Bet Info,Odds,Time of Game,DateTime,Sportsbook Name,Sport
+Texans,Cowboys,Spread,-7,-115,Today • 8:15 PM,2024-11-18 16:29:18.904626,BetMGM,NFL
+Texans,Cowboys,Total (Over),O 41,-110,Today • 8:15 PM,2024-11-18 16:29:18.904638,BetMGM,NFL
+Texans,Cowboys,MoneyLine,,-350,Today • 8:15 PM,2024-11-18 16:29:18.904641,BetMGM,NFL
+Cowboys,Texans,Spread,+7,-105,Today • 8:15 PM,2024-11-18 16:29:18.904644,BetMGM,NFL
+Cowboys,Texans,Total (Under),U 41,-110,Today • 8:15 PM,2024-11-18 16:29:18.904647,BetMGM,NFL
+Cowboys,Texans,MoneyLine,,+280,Today • 8:15 PM,2024-11-18 16:29:18.904650,BetMGM,NFL
+Steelers,Browns,Spread,-3.5,-120,11/21/24 8:15 PM,2024-11-18 16:29:18.907921,BetMGM,NFL
+Steelers,Browns,Total (Over),O 36.5,-110,11/21/24 8:15 PM,2024-11-18 16:29:18.907928,BetMGM,NFL
+Steelers,Browns,MoneyLine,,-190,11/21/24 8:15 PM,2024-11-18 16:29:18.907932,BetMGM,NFL
+Browns,Steelers,Spread,+3.5,-110,11/21/24 8:15 PM,2024-11-18 16:29:18.907935,BetMGM,NFL
+Browns,Steelers,Total (Under),U 36.5,-110,11/21/24 8:15 PM,2024-11-18 16:29:18.907938,BetMGM,NFL
+Browns,Steelers,MoneyLine,,+155,11/21/24 8:15 PM,2024-11-18 16:29:18.907941,BetMGM,NFL
+Vikings,Bears,Spread,-3.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.911331,BetMGM,NFL
+Vikings,Bears,Total (Over),O 39.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.911337,BetMGM,NFL
+Vikings,Bears,MoneyLine,,-190,11/24/24 1:00 PM,2024-11-18 16:29:18.911341,BetMGM,NFL
+Bears,Vikings,Spread,+3.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.911344,BetMGM,NFL
+Bears,Vikings,Total (Under),U 39.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.911347,BetMGM,NFL
+Bears,Vikings,MoneyLine,,+155,11/24/24 1:00 PM,2024-11-18 16:29:18.911350,BetMGM,NFL
+Lions,Colts,Spread,-8,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.914369,BetMGM,NFL
+Lions,Colts,Total (Over),O 50.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.914372,BetMGM,NFL
+Lions,Colts,MoneyLine,,-400,11/24/24 1:00 PM,2024-11-18 16:29:18.914375,BetMGM,NFL
+Colts,Lions,Spread,+8,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.914379,BetMGM,NFL
+Colts,Lions,Total (Under),U 50.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.914381,BetMGM,NFL
+Colts,Lions,MoneyLine,,+310,11/24/24 1:00 PM,2024-11-18 16:29:18.914384,BetMGM,NFL
+Patriots,Dolphins,Spread,+7,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.917405,BetMGM,NFL
+Patriots,Dolphins,Total (Over),O 46,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.917409,BetMGM,NFL
+Patriots,Dolphins,MoneyLine,,+280,11/24/24 1:00 PM,2024-11-18 16:29:18.917411,BetMGM,NFL
+Dolphins,Patriots,Spread,-7,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.917414,BetMGM,NFL
+Dolphins,Patriots,Total (Under),U 46,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.917417,BetMGM,NFL
+Dolphins,Patriots,MoneyLine,,-350,11/24/24 1:00 PM,2024-11-18 16:29:18.917420,BetMGM,NFL
+Buccaneers,Giants,Spread,-5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.920785,BetMGM,NFL
+Buccaneers,Giants,Total (Over),O 42,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.920790,BetMGM,NFL
+Buccaneers,Giants,MoneyLine,,-250,11/24/24 1:00 PM,2024-11-18 16:29:18.920794,BetMGM,NFL
+Giants,Buccaneers,Spread,+5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.920797,BetMGM,NFL
+Giants,Buccaneers,Total (Under),U 42,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.920800,BetMGM,NFL
+Giants,Buccaneers,MoneyLine,,+190,11/24/24 1:00 PM,2024-11-18 16:29:18.920803,BetMGM,NFL
+Cowboys,Commanders,Spread,+10,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.924356,BetMGM,NFL
+Cowboys,Commanders,Total (Over),O 45.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.924360,BetMGM,NFL
+Cowboys,Commanders,MoneyLine,,+400,11/24/24 1:00 PM,2024-11-18 16:29:18.924363,BetMGM,NFL
+Commanders,Cowboys,Spread,-10,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.924366,BetMGM,NFL
+Commanders,Cowboys,Total (Under),U 45.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.924369,BetMGM,NFL
+Commanders,Cowboys,MoneyLine,,-550,11/24/24 1:00 PM,2024-11-18 16:29:18.924372,BetMGM,NFL
+Chiefs,Panthers,Spread,-11,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.927387,BetMGM,NFL
+Chiefs,Panthers,Total (Over),O 41.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.927390,BetMGM,NFL
+Chiefs,Panthers,MoneyLine,,-650,11/24/24 1:00 PM,2024-11-18 16:29:18.927393,BetMGM,NFL
+Panthers,Chiefs,Spread,+11,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.927400,BetMGM,NFL
+Panthers,Chiefs,Total (Under),U 41.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.927403,BetMGM,NFL
+Panthers,Chiefs,MoneyLine,,+450,11/24/24 1:00 PM,2024-11-18 16:29:18.927406,BetMGM,NFL
+Titans,Texans,Spread,+7.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.930426,BetMGM,NFL
+Titans,Texans,Total (Over),O 41.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.930429,BetMGM,NFL
+Titans,Texans,MoneyLine,,+300,11/24/24 1:00 PM,2024-11-18 16:29:18.930432,BetMGM,NFL
+Texans,Titans,Spread,-7.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.930434,BetMGM,NFL
+Texans,Titans,Total (Under),U 41.5,-110,11/24/24 1:00 PM,2024-11-18 16:29:18.930437,BetMGM,NFL
+Texans,Titans,MoneyLine,,-375,11/24/24 1:00 PM,2024-11-18 16:29:18.930440,BetMGM,NFL
+Broncos,Raiders,Spread,-5,-110,11/24/24 4:05 PM,2024-11-18 16:29:18.933513,BetMGM,NFL
+Broncos,Raiders,Total (Over),O 41,-110,11/24/24 4:05 PM,2024-11-18 16:29:18.933519,BetMGM,NFL
+Broncos,Raiders,MoneyLine,,-225,11/24/24 4:05 PM,2024-11-18 16:29:18.933522,BetMGM,NFL
+Raiders,Broncos,Spread,+5,-110,11/24/24 4:05 PM,2024-11-18 16:29:18.933525,BetMGM,NFL
+Raiders,Broncos,Total (Under),U 41,-110,11/24/24 4:05 PM,2024-11-18 16:29:18.933528,BetMGM,NFL
+Raiders,Broncos,MoneyLine,,+185,11/24/24 4:05 PM,2024-11-18 16:29:18.933530,BetMGM,NFL
+49ers,Packers,Spread,+2,-110,11/24/24 4:25 PM,2024-11-18 16:29:18.936945,BetMGM,NFL
+49ers,Packers,Total (Over),O 48,-115,11/24/24 4:25 PM,2024-11-18 16:29:18.936952,BetMGM,NFL
+49ers,Packers,MoneyLine,,+105,11/24/24 4:25 PM,2024-11-18 16:29:18.936955,BetMGM,NFL
+Packers,49ers,Spread,-2,-110,11/24/24 4:25 PM,2024-11-18 16:29:18.936958,BetMGM,NFL
+Packers,49ers,Total (Under),U 48,-105,11/24/24 4:25 PM,2024-11-18 16:29:18.936961,BetMGM,NFL
+Packers,49ers,MoneyLine,,-125,11/24/24 4:25 PM,2024-11-18 16:29:18.936966,BetMGM,NFL
+Cardinals,Seahawks,Spread,-1,-105,11/24/24 4:25 PM,2024-11-18 16:29:18.940638,BetMGM,NFL
+Cardinals,Seahawks,Total (Over),O 47.5,-110,11/24/24 4:25 PM,2024-11-18 16:29:18.940643,BetMGM,NFL
+Cardinals,Seahawks,MoneyLine,,-110,11/24/24 4:25 PM,2024-11-18 16:29:18.940646,BetMGM,NFL
+Seahawks,Cardinals,Spread,+1,-115,11/24/24 4:25 PM,2024-11-18 16:29:18.940649,BetMGM,NFL
+Seahawks,Cardinals,Total (Under),U 47.5,-110,11/24/24 4:25 PM,2024-11-18 16:29:18.940654,BetMGM,NFL
+Seahawks,Cardinals,MoneyLine,,-110,11/24/24 4:25 PM,2024-11-18 16:29:18.940657,BetMGM,NFL
+Eagles,Rams,Spread,-3,-110,11/24/24 8:20 PM,2024-11-18 16:29:18.944276,BetMGM,NFL
+Eagles,Rams,Total (Over),O 50,-115,11/24/24 8:20 PM,2024-11-18 16:29:18.944282,BetMGM,NFL
+Eagles,Rams,MoneyLine,,-160,11/24/24 8:20 PM,2024-11-18 16:29:18.944286,BetMGM,NFL
+Rams,Eagles,Spread,+3,-110,11/24/24 8:20 PM,2024-11-18 16:29:18.944289,BetMGM,NFL
+Rams,Eagles,Total (Under),U 50,-105,11/24/24 8:20 PM,2024-11-18 16:29:18.944291,BetMGM,NFL
+Rams,Eagles,MoneyLine,,+135,11/24/24 8:20 PM,2024-11-18 16:29:18.944297,BetMGM,NFL
+Ravens,Chargers,Spread,-3,-110,11/25/24 8:15 PM,2024-11-18 16:29:18.947730,BetMGM,NFL
+Ravens,Chargers,Total (Over),O 50,-110,11/25/24 8:15 PM,2024-11-18 16:29:18.947734,BetMGM,NFL
+Ravens,Chargers,MoneyLine,,-160,11/25/24 8:15 PM,2024-11-18 16:29:18.947737,BetMGM,NFL
+Chargers,Ravens,Spread,+3,-110,11/25/24 8:15 PM,2024-11-18 16:29:18.947740,BetMGM,NFL
+Chargers,Ravens,Total (Under),U 50,-110,11/25/24 8:15 PM,2024-11-18 16:29:18.947743,BetMGM,NFL
+Chargers,Ravens,MoneyLine,,+135,11/25/24 8:15 PM,2024-11-18 16:29:18.947746,BetMGM,NFL
+76ers,Heat,Spread,+5.5,-115,Today • 7:10 PM,2024-11-18 16:29:21.881779,BetMGM,NBA
+76ers,Heat,Total (Over),O 211.5,-110,Today • 7:10 PM,2024-11-18 16:29:21.881796,BetMGM,NBA
+76ers,Heat,MoneyLine,,+170,Today • 7:10 PM,2024-11-18 16:29:21.881799,BetMGM,NBA
+Heat,76ers,Spread,-5.5,-105,Today • 7:10 PM,2024-11-18 16:29:21.881802,BetMGM,NBA
+Heat,76ers,Total (Under),U 211.5,-110,Today • 7:10 PM,2024-11-18 16:29:21.881805,BetMGM,NBA
+Heat,76ers,MoneyLine,,-210,Today • 7:10 PM,2024-11-18 16:29:21.881808,BetMGM,NBA
+Bulls,Pistons,Spread,+4.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.884757,BetMGM,NBA
+Bulls,Pistons,Total (Over),O 233.5,-115,Today • 7:40 PM,2024-11-18 16:29:21.884761,BetMGM,NBA
+Bulls,Pistons,MoneyLine,,+155,Today • 7:40 PM,2024-11-18 16:29:21.884764,BetMGM,NBA
+Pistons,Bulls,Spread,-4.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.884767,BetMGM,NBA
+Pistons,Bulls,Total (Under),U 233.5,-105,Today • 7:40 PM,2024-11-18 16:29:21.884770,BetMGM,NBA
+Pistons,Bulls,MoneyLine,,-190,Today • 7:40 PM,2024-11-18 16:29:21.884773,BetMGM,NBA
+Wizards,Knicks,Spread,+14.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.887822,BetMGM,NBA
+Wizards,Knicks,Total (Over),O 233.5,-115,Today • 7:40 PM,2024-11-18 16:29:21.887826,BetMGM,NBA
+Wizards,Knicks,MoneyLine,,+700,Today • 7:40 PM,2024-11-18 16:29:21.887829,BetMGM,NBA
+Knicks,Wizards,Spread,-14.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.887832,BetMGM,NBA
+Knicks,Wizards,Total (Under),U 233.5,-105,Today • 7:40 PM,2024-11-18 16:29:21.887835,BetMGM,NBA
+Knicks,Wizards,MoneyLine,,-1100,Today • 7:40 PM,2024-11-18 16:29:21.887838,BetMGM,NBA
+Pacers,Raptors,Spread,-3.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.890764,BetMGM,NBA
+Pacers,Raptors,Total (Over),O 234.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.890768,BetMGM,NBA
+Pacers,Raptors,MoneyLine,,-165,Today • 7:40 PM,2024-11-18 16:29:21.890771,BetMGM,NBA
+Raptors,Pacers,Spread,+3.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.890774,BetMGM,NBA
+Raptors,Pacers,Total (Under),U 234.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.890777,BetMGM,NBA
+Raptors,Pacers,MoneyLine,,+140,Today • 7:40 PM,2024-11-18 16:29:21.890780,BetMGM,NBA
+Rockets,Bucks,Spread,+3.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.893818,BetMGM,NBA
+Rockets,Bucks,Total (Over),O 223.5,-115,Today • 7:40 PM,2024-11-18 16:29:21.893825,BetMGM,NBA
+Rockets,Bucks,MoneyLine,,+135,Today • 7:40 PM,2024-11-18 16:29:21.893828,BetMGM,NBA
+Bucks,Rockets,Spread,-3.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.893831,BetMGM,NBA
+Bucks,Rockets,Total (Under),U 223.5,-105,Today • 7:40 PM,2024-11-18 16:29:21.893834,BetMGM,NBA
+Bucks,Rockets,MoneyLine,,-160,Today • 7:40 PM,2024-11-18 16:29:21.893837,BetMGM,NBA
+Magic,Suns,Spread,-4.5,-115,Today • 8:10 PM,2024-11-18 16:29:21.896888,BetMGM,NBA
+Magic,Suns,Total (Over),O 212.5,-105,Today • 8:10 PM,2024-11-18 16:29:21.896891,BetMGM,NBA
+Magic,Suns,MoneyLine,,-190,Today • 8:10 PM,2024-11-18 16:29:21.896894,BetMGM,NBA
+Suns,Magic,Spread,+4.5,-105,Today • 8:10 PM,2024-11-18 16:29:21.896898,BetMGM,NBA
+Suns,Magic,Total (Under),U 212.5,-115,Today • 8:10 PM,2024-11-18 16:29:21.896900,BetMGM,NBA
+Suns,Magic,MoneyLine,,+155,Today • 8:10 PM,2024-11-18 16:29:21.896903,BetMGM,NBA
+Hawks,Kings,Spread,+4.5,-110,Today • 9:10 PM,2024-11-18 16:29:21.899861,BetMGM,NBA
+Hawks,Kings,Total (Over),O 237.5,-105,Today • 9:10 PM,2024-11-18 16:29:21.899864,BetMGM,NBA
+Hawks,Kings,MoneyLine,,+150,Today • 9:10 PM,2024-11-18 16:29:21.899867,BetMGM,NBA
+Kings,Hawks,Spread,-4.5,-110,Today • 9:10 PM,2024-11-18 16:29:21.899870,BetMGM,NBA
+Kings,Hawks,Total (Under),U 237.5,-115,Today • 9:10 PM,2024-11-18 16:29:21.899873,BetMGM,NBA
+Kings,Hawks,MoneyLine,,-185,Today • 9:10 PM,2024-11-18 16:29:21.899876,BetMGM,NBA
+Warriors,Clippers,Spread,-5.5,-105,Today • 10:10 PM,2024-11-18 16:29:21.903044,BetMGM,NBA
+Warriors,Clippers,Total (Over),O 225.5,-115,Today • 10:10 PM,2024-11-18 16:29:21.903051,BetMGM,NBA
+Warriors,Clippers,MoneyLine,,-210,Today • 10:10 PM,2024-11-18 16:29:21.903055,BetMGM,NBA
+Clippers,Warriors,Spread,+5.5,-115,Today • 10:10 PM,2024-11-18 16:29:21.903058,BetMGM,NBA
+Clippers,Warriors,Total (Under),U 225.5,-105,Today • 10:10 PM,2024-11-18 16:29:21.903061,BetMGM,NBA
+Clippers,Warriors,MoneyLine,,+170,Today • 10:10 PM,2024-11-18 16:29:21.903064,BetMGM,NBA
+Cavaliers,Celtics,Spread,+4.5,-105,Today • 10:40 PM,2024-11-18 16:29:21.906502,BetMGM,NBA
+Cavaliers,Celtics,Total (Over),O 231.5,-110,Today • 10:40 PM,2024-11-18 16:29:21.906509,BetMGM,NBA
+Cavaliers,Celtics,MoneyLine,,+150,Today • 10:40 PM,2024-11-18 16:29:21.906513,BetMGM,NBA
+Celtics,Cavaliers,Spread,-4.5,-115,Today • 10:40 PM,2024-11-18 16:29:21.906516,BetMGM,NBA
+Celtics,Cavaliers,Total (Under),U 231.5,-110,Today • 10:40 PM,2024-11-18 16:29:21.906519,BetMGM,NBA
+Celtics,Cavaliers,MoneyLine,,-185,Today • 10:40 PM,2024-11-18 16:29:21.906522,BetMGM,NBA
+Hornets,Nets,Spread,+2.5,-115,Today • 10:40 PM,2024-11-18 16:29:21.909446,BetMGM,NBA
+Hornets,Nets,Total (Over),O 223.5,-115,Today • 10:40 PM,2024-11-18 16:29:21.909450,BetMGM,NBA
+Hornets,Nets,MoneyLine,,+105,Today • 10:40 PM,2024-11-18 16:29:21.909453,BetMGM,NBA
+Nets,Hornets,Spread,-2.5,-105,Today • 10:40 PM,2024-11-18 16:29:21.909456,BetMGM,NBA
+Nets,Hornets,Total (Under),U 223.5,-105,Today • 10:40 PM,2024-11-18 16:29:21.909459,BetMGM,NBA
+Nets,Hornets,MoneyLine,,-130,Today • 10:40 PM,2024-11-18 16:29:21.909463,BetMGM,NBA
+Nuggets,Grizzlies,Spread,+3.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.912759,BetMGM,NBA
+Nuggets,Grizzlies,Total (Over),O 228.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.912764,BetMGM,NBA
+Nuggets,Grizzlies,MoneyLine,,+135,Today • 7:40 PM,2024-11-18 16:29:21.912767,BetMGM,NBA
+Grizzlies,Nuggets,Spread,-3.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.912770,BetMGM,NBA
+Grizzlies,Nuggets,Total (Under),U 228.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.912773,BetMGM,NBA
+Grizzlies,Nuggets,MoneyLine,,-165,Today • 7:40 PM,2024-11-18 16:29:21.912777,BetMGM,NBA
+Pelicans,Mavericks,Spread,+10.5,-110,Today • 7:10 PM,2024-11-18 16:29:21.916520,BetMGM,NBA
+Pelicans,Mavericks,Total (Over),O 224.5,-105,Today • 7:10 PM,2024-11-18 16:29:21.916527,BetMGM,NBA
+Pelicans,Mavericks,MoneyLine,,+400,Today • 7:10 PM,2024-11-18 16:29:21.916530,BetMGM,NBA
+Mavericks,Pelicans,Spread,-10.5,-110,Today • 7:10 PM,2024-11-18 16:29:21.916533,BetMGM,NBA
+Mavericks,Pelicans,Total (Under),U 224.5,-115,Today • 7:10 PM,2024-11-18 16:29:21.916536,BetMGM,NBA
+Mavericks,Pelicans,MoneyLine,,-550,Today • 7:10 PM,2024-11-18 16:29:21.916539,BetMGM,NBA
+Thunder,Spurs,Spread,-8.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.919771,BetMGM,NBA
+Thunder,Spurs,Total (Over),O 222.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.919776,BetMGM,NBA
+Thunder,Spurs,MoneyLine,,-350,Today • 7:40 PM,2024-11-18 16:29:21.919779,BetMGM,NBA
+Spurs,Thunder,Spread,+8.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.919782,BetMGM,NBA
+Spurs,Thunder,Total (Under),U 222.5,-110,Today • 7:40 PM,2024-11-18 16:29:21.919785,BetMGM,NBA
+Spurs,Thunder,MoneyLine,,+275,Today • 7:40 PM,2024-11-18 16:29:21.919792,BetMGM,NBA
+Jazz,Lakers,Spread,+11.5,-115,Today • 7:40 PM,2024-11-18 16:29:21.923330,BetMGM,NBA
+Jazz,Lakers,Total (Over),O 230.5,-105,Today • 7:40 PM,2024-11-18 16:29:21.923336,BetMGM,NBA
+Jazz,Lakers,MoneyLine,,+400,Today • 7:40 PM,2024-11-18 16:29:21.923340,BetMGM,NBA
+Lakers,Jazz,Spread,-11.5,-105,Today • 7:40 PM,2024-11-18 16:29:21.923343,BetMGM,NBA
+Lakers,Jazz,Total (Under),U 230.5,-115,Today • 7:40 PM,2024-11-18 16:29:21.923346,BetMGM,NBA
+Lakers,Jazz,MoneyLine,,-550,Today • 7:40 PM,2024-11-18 16:29:21.923350,BetMGM,NBA

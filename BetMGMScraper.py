@@ -21,6 +21,7 @@ def extract_odds(page, url, sport_type):
 
     # Find each game container
     games = soup.find_all('ms-six-pack-event', class_='grid-event grid-six-pack-event ms-active-highlight two-lined-name ng-star-inserted')
+    game_date = soup.find('ms-prematch-timer', class_='pre-match-time starting-time timer-badge ng-star-inserted')
 
     for game in games:
         # Extract team names
@@ -67,19 +68,21 @@ def extract_odds(page, url, sport_type):
 
         # Append data for Team A if odds exist
         if spread_line_a and spread_odds_a:
-            odds_data.append([team_a, team_b, 'Spread', spread_line_a, spread_odds_a, datetime.datetime.now(), 'BetMGM', sport_type])
+            odds_data.append([team_a, team_b, 'Spread', spread_line_a, spread_odds_a, game_date.get_text(), datetime.datetime.now(), 'BetMGM', sport_type])
         if total_line_a and total_odds_a:
-            odds_data.append([team_a, team_b, 'Total (Over)', total_line_a, total_odds_a, datetime.datetime.now(), 'BetMGM', sport_type])
+            odds_data.append([team_a, team_b, 'Total (Over)', total_line_a, total_odds_a, game_date.get_text(), datetime.datetime.now(), 'BetMGM', sport_type])
         if moneyline_a:
-            odds_data.append([team_a, team_b, 'MoneyLine', '', moneyline_a, datetime.datetime.now(), 'BetMGM', sport_type])
+            odds_data.append([team_a, team_b, 'MoneyLine', '', moneyline_a, game_date.get_text(), datetime.datetime.now(), 'BetMGM', sport_type])
+
 
         # Append data for Team B if odds exist
         if spread_line_b and spread_odds_b:
-            odds_data.append([team_b, team_a, 'Spread', spread_line_b, spread_odds_b, datetime.datetime.now(), 'BetMGM', sport_type])
+            odds_data.append([team_b, team_a, 'Spread', spread_line_b, spread_odds_b, game_date.get_text(), datetime.datetime.now(), 'BetMGM', sport_type])
         if total_line_b and total_odds_b:
-            odds_data.append([team_b, team_a, 'Total (Under)', total_line_b, total_odds_b, datetime.datetime.now(), 'BetMGM', sport_type])
+            odds_data.append([team_b, team_a, 'Total (Under)', total_line_b, total_odds_b, game_date.get_text(), datetime.datetime.now(), 'BetMGM', sport_type])
         if moneyline_b:
-            odds_data.append([team_b, team_a, 'MoneyLine', '', moneyline_b, datetime.datetime.now(), 'BetMGM', sport_type])
+            odds_data.append([team_b, team_a, 'MoneyLine', '', moneyline_b, game_date.get_text(), datetime.datetime.now(), 'BetMGM', sport_type])
+        game_date = game_date.find_next('ms-prematch-timer', class_='pre-match-time starting-time timer-badge ng-star-inserted')
 
     return odds_data
 
@@ -102,7 +105,7 @@ def run():
         if not odds_data:
             print("No data extracted for either NFL or NBA.")
         else:
-            odds_df = pd.DataFrame(odds_data, columns=['Team 1', 'Team 2', 'Bet Type', 'Bet Info', 'Odds', 'DateTime', 'Sportsbook Name', 'Sport'])
+            odds_df = pd.DataFrame(odds_data, columns=['Team 1', 'Team 2', 'Bet Type', 'Bet Info', 'Odds', 'Time of Game', 'DateTime', 'Sportsbook Name', 'Sport'])
             odds_df.to_csv('BetMGM_combined_odds.csv', index=False)
             print("Data extraction complete and saved to CSV.")
 
