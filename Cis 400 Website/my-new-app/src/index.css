@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f0f0; /* Light grey background */
+  color: #333; /* Dark grey text */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: #e0e0e0; /* Light grey background for code */
+  color: #333; /* Dark grey text for code */
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.content {
+  margin-top: 64px; /* Adjust based on the height of your header */
+  padding: 20px;
+}
+
+.MuiAppBar-root {
+  background-color: #3f51b5 !important; /* Default Material-UI primary color */
+}
+
+.MuiToolbar-root {
+  color: #fff !important; /* White text for Toolbar */
+}
+
+.MuiTable-root {
+  background-color: #fff; /* White background for Table */
+  color: #333; /* Dark grey text for Table */
+}
+
+.MuiTableCell-root {
+  border-bottom: 1px solid #ddd; /* Light grey border for Table cells */
+}
+
+.MuiButton-containedPrimary {
+  background-color: #3f51b5 !important; /* Default Material-UI primary color */
+  color: #fff !important; /* White text for primary buttons */
+}
+
+.MuiButton-containedSecondary {
+  background-color: #f50057 !important; /* Default Material-UI secondary color */
+  color: #fff !important; /* White text for secondary buttons */
+}
+
+.MuiTextField-root {
+  color: #333 !important; /* Dark grey text for TextField */
+}
+
+.MuiInputBase-input {
+  color: #333 !important; /* Dark grey text for input fields */
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #ddd !important; /* Light grey border for input fields */
+}
