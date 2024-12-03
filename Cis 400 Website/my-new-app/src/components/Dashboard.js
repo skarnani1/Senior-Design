@@ -97,143 +97,114 @@ function Dashboard() {
     };
 
     return (
-        <Container component="main" maxWidth="lg" style={{ marginTop: '5px' }}>
-            {/* Dashboard Title */}
-            <Typography
-                component="h1"
-                variant="h5"
-                style={{
-                    fontWeight: 'bold',
-                    textAlign: 'left',
-                    marginBottom: '10px',
-                }}
-            >
-                Dashboard
-            </Typography>
+        <Container component="main" maxWidth="lg" style={{marginTop: '20px'}}>
+            {/* Form Controls for Scraping */}
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <FormControl style={{marginRight: '10px', minWidth: '120px'}}>
+                        <InputLabel>Sport</InputLabel>
+                        <Select value={sport} onChange={(e) => setSport(e.target.value)}>
+                            <MenuItem value="football">Football</MenuItem>
+                            <MenuItem value="basketball">Basketball</MenuItem>
+                            <MenuItem value="baseball">Baseball</MenuItem>
+                            {/* Add more sports as needed */}
+                        </Select>
+                    </FormControl>
 
-            {/* Filter and Button Section */}
-            <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                style={{
-                    padding: '10px',
-                    backgroundColor: 'transparent',
-                    boxShadow: 'none',
-                    marginBottom: '20px',
-                }}
-            >
-                {/* Filters */}
-                <Grid container item xs={12} md={9} spacing={2}>
-                    <Grid item xs={12} sm={4}>
-                        <FormControl variant="outlined" fullWidth>
-                            <InputLabel>Sport</InputLabel>
-                            <Select value={sport} onChange={(e) => setSport(e.target.value)} label="Sport">
-                                <MenuItem value="football">Football</MenuItem>
-                                <MenuItem value="basketball">Basketball</MenuItem>
-                                <MenuItem value="baseball">Baseball</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                        <FormControl variant="outlined" fullWidth>
-                            <InputLabel>Sportsbook</InputLabel>
-                            <Select
-                                value={sportsbook}
-                                onChange={(e) => setSportsbook(e.target.value)}
-                                label="Sportsbook"
-                            >
-                                <MenuItem value="sportsbook1">Sportsbook 1</MenuItem>
-                                <MenuItem value="sportsbook2">Sportsbook 2</MenuItem>
-                                <MenuItem value="sportsbook3">Sportsbook 3</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                        <TextField
-                            label="Date"
-                            type="date"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            variant="outlined"
-                            fullWidth
-                        />
-                    </Grid>
-                </Grid>
+                    <FormControl style={{marginRight: '10px', minWidth: '120px'}}>
+                        <InputLabel>Sportsbook</InputLabel>
+                        <Select value={sportsbook} onChange={(e) => setSportsbook(e.target.value)}>
+                            <MenuItem value="sportsbook1">Sportsbook 1</MenuItem>
+                            <MenuItem value="sportsbook2">Sportsbook 2</MenuItem>
+                            <MenuItem value="sportsbook3">Sportsbook 3</MenuItem>
+                            {/* Add more sportsbooks as needed */}
+                        </Select>
+                    </FormControl>
 
-                {/* Buttons */}
-                <Grid
-                    container
-                    item
-                    xs={12}
-                    md={3}
-                    spacing={2}
-                    direction="column"
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Grid item style={{ width: '100%' }}>
-                        <Button
-                            variant="contained"
-                            style={{
-                                backgroundColor: '#2d4edb',
-                                color: 'white',
-                                fontWeight: 'bold',
-                                padding: '10px 0',
-                                borderRadius: '0',
-                                width: '100%',
-                                height: '50px',
-                            }}
-                            onClick={handleScrapeNow}
-                            disabled={loading}
-                        >
-                            {loading ? <CircularProgress size={24} style={{ color: 'white' }} /> : 'Scrape Now'}
-                        </Button>
-                    </Grid>
-                    <Grid item style={{ width: '100%' }}>
-                        <Button
-                            variant="contained"
-                            style={{
-                                backgroundColor: '#e53935',
-                                color: 'white',
-                                fontWeight: 'bold',
-                                padding: '10px 0',
-                                borderRadius: '0',
-                                width: '100%',
-                                height: '50px',
-                            }}
-                            onClick={handleDetectArbitrage}
-                        >
-                            Detect Arbitrage
-                        </Button>
-                    </Grid>
+                    <TextField
+                        label="Date"
+                        type="date"
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        style={{marginRight: '10px'}}
+                    />
+
+                    <Button variant="contained" color="primary" onClick={handleScrapeNow} disabled={loading}>
+                        {loading ? <CircularProgress size={24}/> : 'Scrape Now'}
+                    </Button>
+                    <Button variant="contained" color="secondary" onClick={handleDetectArbitrage}
+                            style={{marginLeft: '10px'}}>
+                        Detect Arbitrage
+                    </Button>
                 </Grid>
             </Grid>
 
-            {/* Arbitrage Results Section */}
-            {arbitrageResults.length > 0 ? (
-                <ResultsTable data={arbitrageResults} title="Arbitrage Results" />
-            ) : (
-                <Typography
-                    variant="body1"
-                    style={{
-                        marginTop: '20px',
-                        fontStyle: 'italic',
-                        textAlign: 'center',
-                        color: 'grey',
-                    }}
-                >
-                    No arbitrage detected.
-                </Typography>
-            )}
+            {/* Sports Betting Arbitrage Dashboard */}
+            <Typography component="h1" variant="h6" gutterBottom style={{marginTop: '20px'}}>
+                Sports Betting Arbitrage Dashboard
+            </Typography>
 
-            {/* Scraping Results Section */}
-            <ResultsTable data={scrapingData} title="Scraping Results" />
+            <Grid container spacing={3}>
+                {/* Arbitrage Results */}
+                <Grid item xs={12}>
+                    {arbitrageResults.length > 0 ? (
+                        arbitrageResults.map((result, index) => (
+                            <Box key={index} border={1} borderColor="grey.400" borderRadius={4} padding={2}
+                                 marginBottom={4}>
+                                <Typography variant="h6" gutterBottom>
+                                    Arbitrage Opportunity #{index + 1}
+                                </Typography>
+                                <Typography variant="body1" gutterBottom>
+                                    <strong>Percent:</strong> {result.percent.toFixed(2)}%
+                                </Typography>
+
+                                {/* Row 1 */}
+                                <Typography variant="body1" gutterBottom>
+                                    <strong>Row 1:</strong>
+                                </Typography>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={4}><strong>Team 1:</strong> {result.row1.team1}</Grid>
+                                    <Grid item xs={4}><strong>Team 2:</strong> {result.row1.team2}</Grid>
+                                    <Grid item xs={4}><strong>Bet Type:</strong> {result.row1.betType}</Grid>
+                                    <Grid item xs={4}><strong>Bet Info:</strong> {result.row1.betInfo}</Grid>
+                                    <Grid item xs={4}><strong>Odds:</strong> {result.row1.odds}</Grid>
+                                    <Grid item xs={4}><strong>Date of Game:</strong> {result.row1.dateOfGame}</Grid>
+                                    <Grid item xs={4}><strong>Sportsbook:</strong> {result.row1.sportsbookName}</Grid>
+                                    <Grid item xs={4}><strong>Sport:</strong> {result.row1.sport}</Grid>
+                                </Grid>
+
+                                {/* Row 2 */}
+                                <Typography variant="body1" gutterBottom style={{marginTop: '10px'}}>
+                                    <strong>Row 2:</strong>
+                                </Typography>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={4}><strong>Team 1:</strong> {result.row2.team1}</Grid>
+                                    <Grid item xs={4}><strong>Team 2:</strong> {result.row2.team2}</Grid>
+                                    <Grid item xs={4}><strong>Bet Type:</strong> {result.row2.betType}</Grid>
+                                    <Grid item xs={4}><strong>Bet Info:</strong> {result.row2.betInfo}</Grid>
+                                    <Grid item xs={4}><strong>Odds:</strong> {result.row2.odds}</Grid>
+                                    <Grid item xs={4}><strong>Date of Game:</strong> {result.row2.dateOfGame}</Grid>
+                                    <Grid item xs={4}><strong>Sportsbook:</strong> {result.row2.sportsbookName}</Grid>
+                                    <Grid item xs={4}><strong>Sport:</strong> {result.row2.sport}</Grid>
+                                </Grid>
+                            </Box>
+                        ))
+                    ) : (
+                        <Typography>No arbitrage opportunities detected.</Typography>
+                    )}
+                </Grid>
+
+                {/* Scraping Results */}
+                <Grid item xs={12}>
+                    <ResultsTable data={scrapingData}/>
+                </Grid>
+            </Grid>
         </Container>
     );
+
 }
 
     export default Dashboard;
