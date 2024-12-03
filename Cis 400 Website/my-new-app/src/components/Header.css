@@ -1,3 +1,24 @@
+.header {
+  background-color: #2d4edb;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo {
   height: 40px;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -6,4 +27,34 @@
 .logo:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
+}
+
+/* Title Styling */
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.icon {
+  font-size: 1.5rem;
 }
