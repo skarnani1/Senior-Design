@@ -25,8 +25,9 @@ function BonusBetsCalculator() {
         setCalculationError(''); // Clear any previous errors
 
         // Example calculation (simplified - needs proper bonus bet logic)
-        const layStake = (amount * odd1) / (odd2 + 1); // Placeholder formula
-        const profit = amount - layStake; // Placeholder formula
+        const bet1Payout = (amount * odd1) / 100;
+        const layStake = odd2 > 0 ? (100 * bet1Payout) / (odd2 + 100) :  (-odd2 * bet1Payout) / (100 - odd2); // Placeholder formula
+        const profit = bet1Payout - layStake; // Placeholder formula
 
         setCalculatedLayStake(layStake.toFixed(2));
         setPotentialProfit(profit.toFixed(2));
@@ -86,10 +87,10 @@ function BonusBetsCalculator() {
                         <Typography><strong>Potential Profit:</strong> ${potentialProfit}</Typography>
                         <Typography variant="body2" sx={{ mt: 2, fontStyle: 'italic' }}>
                             Note: This is a simplified calculation. Actual bonus bet strategies may vary.
-                            **Replace the calculation logic in `BonusBetsCalculator.js` with your accurate formula.**
                         </Typography>
                     </Box>
                 )}
+                
             </Paper>
         </Container>
     );
