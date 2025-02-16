@@ -1,74 +1,118 @@
 import React from 'react';
-import { Avatar, Button, TextField, Typography, Container, Grid } from '@mui/material';
+import { Container, Typography, Grid, List, ListItem, ListItemText, Paper, Box } from '@mui/material';
+import ResultsTable from './ResultsTable';
 
 function Profile() {
-  const handleLogout = () => {
-    // Logic for logging out the user
-  };
+    // Placeholder data - DECLARED INSIDE COMPONENT
+    const favoriteSportsbooksData = [
+        'Sportsbook 1',
+        'Sportsbook 3',
+        // ... more favorite sportsbooks ...
+    ];
 
-  return (
-    <Container component="main" maxWidth="xs">
-      <div style={{ marginTop: '20px', textAlign: 'center' }}>
-        <Avatar alt="User Name" src="/static/images/avatar/1.jpg" style={{ margin: 'auto', width: '100px', height: '100px' }} />
-        <Typography component="h1" variant="h5" style={{ marginTop: '10px' }}>
-          User Name
-        </Typography>
-        <Typography variant="body1" style={{ marginTop: '10px' }}>
-          user@example.com
-        </Typography>
-        <form style={{ marginTop: '20px' }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                fullWidth
-                label="Full Name"
-                name="fullName"
-                autoComplete="name"
-              />
+    const favoriteSportsData = [
+        'Football',
+        'Basketball',
+        // ... more favorite sports ...
+    ];
+
+    const pastBetsData = [
+        {
+            team1: 'Team A',
+            team2: 'Team B',
+            betType: 'Moneyline',
+            betInfo: 'Team A Win',
+            odds: '+150',
+            dateOfGame: '2024-03-15',
+            sportsbookName: 'Sportsbook 1',
+            sport: 'football',
+            betAmount: '$20',
+            result: 'Win',
+        },
+        {
+            team1: 'Team X',
+            team2: 'Team Y',
+            betType: 'Spread',
+            betInfo: 'Team X -3.5',
+            odds: '-110',
+            dateOfGame: '2024-03-20',
+            sportsbookName: 'Sportsbook 2',
+            sport: 'basketball',
+            betAmount: '$30',
+            result: 'Loss',
+        },
+        // ... more past bet data ...
+    ];
+
+    return (
+        <Container component="main" maxWidth="md" sx={{ mt: 4, mb: 4 }}>
+            <Typography component="h1" variant="h4" align="center" gutterBottom>
+                Your Profile
+            </Typography>
+
+            <Grid container spacing={3}>
+                {/* Favorite Sportsbooks Section */}
+                <Grid item xs={12} md={4}>
+                    <Paper elevation={3} sx={{ p: 3 }}>
+                        <Typography variant="h6" gutterBottom>
+                            Favorite Sportsbooks
+                        </Typography>
+                        <List dense>
+                            {favoriteSportsbooksData.map((book, index) => (
+                                <ListItem key={index}>
+                                    <ListItemText primary={book} />
+                                </ListItem>
+                            ))}
+                        </List>
+                        {favoriteSportsbooksData.length === 0 && (
+                            <Typography variant="body2" color="textSecondary">
+                                No favorite sportsbooks selected.
+                            </Typography>
+                        )}
+                    </Paper>
+                </Grid>
+
+                {/* Favorite Sports Section */}
+                <Grid item xs={12} md={4}>
+                    <Paper elevation={3} sx={{ p: 3 }}>
+                        <Typography variant="h6" gutterBottom>
+                            Favorite Sports
+                        </Typography>
+                        <List dense>
+                            {favoriteSportsData.map((sport, index) => (
+                                <ListItem key={index}>
+                                    <ListItemText primary={sport} />
+                                </ListItem>
+                            ))}
+                        </List>
+                        {favoriteSportsData.length === 0 && (
+                            <Typography variant="body2" color="textSecondary">
+                                No favorite sports selected.
+                            </Typography>
+                        )}
+                    </Paper>
+                </Grid>
+
+                {/* Past Bets Section */}
+                <Grid item xs={12} md={4}>
+                    <Paper elevation={3} sx={{ p: 3 }}>
+                        <Typography variant="h6" gutterBottom>
+                            Past Bets
+                        </Typography>
+                        <Box sx={{ minHeight: 200 }}>
+                            {pastBetsData.length > 0 ? (
+                                <ResultsTable data={pastBetsData} title="Past Bets" />
+                            ) : (
+                                <Typography variant="body2" color="textSecondary" sx={{ fontStyle: 'italic', textAlign: 'center', mt: 2 }}>
+                                    No past bets recorded.
+                                </Typography>
+                            )}
+                        </Box>
+                    </Paper>
+                </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                fullWidth
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                fullWidth
-                label="Password"
-                type="password"
-                name="password"
-                autoComplete="current-password"
-              />
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            style={{ marginTop: '20px' }}
-          >
-            Update Profile
-          </Button>
-        </form>
-        <Button
-          fullWidth
-          variant="contained"
-          color="secondary"
-          style={{ marginTop: '20px' }}
-          onClick={handleLogout}
-        >
-          Logout
-        </Button>
-      </div>
-    </Container>
-  );
+        </Container>
+    );
 }
 
 export default Profile;

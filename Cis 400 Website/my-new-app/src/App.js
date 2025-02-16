@@ -7,17 +7,9 @@ import Profile from './components/Profile';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import TermsOfService from './components/TermsOfService'; // Import TermsOfService
+import PrivacyPolicy from './components/PrivacyPolicy'; // Import PrivacyPolicy
 
-/* more About and contant to footer, make profile into classic SVG
- make a live odds, arbitrage oppurtunities and probabilistic bets page
- change start / stops scraping to Scrape Now button (add filter toggle to 
- choose which sports / sportsbook/ date to scrape etc)
-  make user see profile immediately after login
-  make user able to see their past bets and favorite sports adn filter their live odds by sport
-  left align in about us section
-  Add logo to header
-  Add a footer with contact us, about us, privacy policy, terms of service, and social media links
-*/
 function App() {
   return (
     <Router>
@@ -30,11 +22,12 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} /> {/* Add TOS Route */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* Add Privacy Policy Route */}
           </Routes>
         </div>
         <Footer />
       </div>
-      
     </Router>
   );
 }

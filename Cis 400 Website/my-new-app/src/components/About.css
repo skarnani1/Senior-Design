@@ -1,3 +1,76 @@
+/* About.css */
+
 .about-container {
-  text-align: left;
+  text-align: left; /* Keep left alignment for readability */
+  padding: 20px;   /* Add some padding around the container content */
+}
+
+.about-container h1 {
+  color: #333; /* Darker heading color */
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  color: #555; /* Slightly lighter subheading color */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee; /* Add a subtle bottom border to subheadings */
+  padding-bottom: 5px;
+}
+
+.about-container p {
+  line-height: 1.6; /* Improve paragraph readability with line spacing */
+  color: #444; /* Slightly softer text color */
+}
+
+/* Style for team member slides in the carousel */
+.slick-slide > div { /* Target direct div child of slick-slide */
+  padding: 20px;
+}
+
+.slick-slide .MuiAvatar-root { /* Style avatars in slides */
+  margin-bottom: 15px;
+  border: 3px solid #f0f0f0; /* Add a border around avatars */
+}
+
+.slick-slide strong { /* Style bold text within slides (e.g., member names) */
+  font-weight: 600; /* Make bold text a bit bolder */
+  color: #333;
+}
+
+.slick-slide span { /* Style spans within slides (e.g., role, background labels) */
+  font-weight: 500; /* Slightly less bold for labels */
+  color: #777;
+}
+
+.slick-dots { /* Style the carousel dots */
+  bottom: 10px; /* Adjust dot position */
+}
+
+.slick-dots li button:before { /* Style the dots themselves */
+  font-size: 10px;
+  color: #bbb; /* Inactive dot color */
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before { /* Style the active dot */
+  color: #777; /* Active dot color */
+  opacity: 1;
+}
+
+
+/* Responsive adjustments (optional - if you want to adjust layout on smaller screens) */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .slick-slide > div {
+    padding: 15px; /* Reduce slide padding on smaller screens */
+  }
+
+  .slick-slide .MuiAvatar-root {
+    width: 80px; /* Smaller avatars on smaller screens */
+    height: 80px;
+  }
 }

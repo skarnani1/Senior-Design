@@ -1,12 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif; /* Now using Roboto, consistent with Material UI */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f0f0; /* Light grey background */
-  color: #333; /* Dark grey text */
+  background-color: #f0f0f0; /* Background color now also set in theme, but kept here as a fallback or for non-MUI elements */
+  color: #333; /* Text color now also set in theme, but kept here as a fallback */
 }
 
 code {
@@ -19,7 +17,7 @@ code {
 }
 
 .App {
-  text-align: center;
+  text-align: center; /* Consider if you still want this globally */
 }
 
 .header {
@@ -34,41 +32,23 @@ code {
   padding: 20px;
 }
 
-.MuiAppBar-root {
-  background-color: #3f51b5 !important; /* Default Material-UI primary color */
-}
-
-.MuiToolbar-root {
-  color: #fff !important; /* White text for Toolbar */
-}
-
 .MuiTable-root {
-  background-color: #fff; /* White background for Table */
-  color: #333; /* Dark grey text for Table */
+  background-color: #fff; /* White background for Table -  still useful if you want to ensure table background is always white, even if theme changes */
+  color: #333; /* Dark grey text for Table - also still useful */
 }
 
 .MuiTableCell-root {
-  border-bottom: 1px solid #ddd; /* Light grey border for Table cells */
+  border-bottom: 1px solid #ddd; /* Light grey border for Table cells - useful for table cell separators */
 }
 
-.MuiButton-containedPrimary {
-  background-color: #3f51b5 !important; /* Default Material-UI primary color */
-  color: #fff !important; /* White text for primary buttons */
-}
-
-.MuiButton-containedSecondary {
-  background-color: #f50057 !important; /* Default Material-UI secondary color */
-  color: #fff !important; /* White text for secondary buttons */
-}
-
-.MuiTextField-root {
-  color: #333 !important; /* Dark grey text for TextField */
-}
-
-.MuiInputBase-input {
-  color: #333 !important; /* Dark grey text for input fields */
-}
-
-.MuiOutlinedInput-notchedOutline {
-  border-color: #ddd !important; /* Light grey border for input fields */
-}
+/*
+  REMOVED Material UI Color Overrides:
+  .MuiAppBar-root
+  .MuiToolbar-root
+  .MuiButton-containedPrimary
+  .MuiButton-containedSecondary
+  .MuiTextField-root
+  .MuiInputBase-input
+  .MuiOutlinedInput-notchedOutline
+  These are now controlled by your theme in index.js
+*/
