@@ -194,8 +194,8 @@ function Dashboard() {
                         />
                     </Grid>
                     <Grid item xs={12} md={3} sx={{ textAlign: 'right' }}>
-                        <Button variant="contained" color="primary" onClick={handleScrapeNow} disabled={loading || scrapingStatus !== 'idle'}>
-                            {loading || scrapingStatus !== 'idle' ? <CircularProgress size={24} /> : 'Scrape Now'}
+                        <Button variant="contained" color="primary" onClick={handleScrapeNow} disabled={loading}>
+                            {loading  ? <CircularProgress size={24} /> : 'Scrape Now'}
                         </Button>
                     </Grid>
                     <Grid item xs={12}>
