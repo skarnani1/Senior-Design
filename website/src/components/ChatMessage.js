@@ -16,14 +16,14 @@ export function ChatMessage({ message, isBot, isThinking = false }) {
       alignItems: 'flex-start', 
       gap: 1.5,
       flexDirection: isBot ? 'row' : 'row-reverse',
-      mb: 2,
+      mb: 1.5,
       maxWidth: '70%',
       width: 'fit-content',
       marginLeft: isBot ? '0' : 'auto'
     }}>
       <Box sx={{ 
-        height: 32,
-        width: 32,
+        height: 28,
+        width: 28,
         borderRadius: '50%',
         display: 'flex',
         alignItems: 'center',
@@ -32,8 +32,8 @@ export function ChatMessage({ message, isBot, isThinking = false }) {
         flexShrink: 0
       }}>
         {isBot ? 
-          <Bot size={20} color="white" /> : 
-          <User size={20} color="white" />
+          <Bot size={16} color="white" /> : 
+          <User size={16} color="white" />
         }
       </Box>
       <Box sx={{ 
@@ -42,13 +42,13 @@ export function ChatMessage({ message, isBot, isThinking = false }) {
         pl: isBot ? 0 : 6
       }}>
         {isThinking ? (
-          <Box sx={{ display: 'flex', gap: 1, p: 1.5 }}>
+          <Box sx={{ display: 'flex', gap: 1, p: 1 }}>
             {[0, 1, 2].map((i) => (
               <Box
                 key={i}
                 sx={{
-                  height: 12,
-                  width: 12,
+                  height: 8,
+                  width: 8,
                   borderRadius: '50%',
                   bgcolor: 'grey.300',
                   animation: 'bounce 1s infinite',
@@ -61,7 +61,7 @@ export function ChatMessage({ message, isBot, isThinking = false }) {
           <Paper
             elevation={isBot ? 1 : 0}
             sx={{
-              p: 2,
+              p: 1.5,
               borderRadius: 2.5,
               bgcolor: isBot ? 'white' : '#6b7db3',
               color: isBot ? 'text.primary' : 'white',
@@ -72,17 +72,17 @@ export function ChatMessage({ message, isBot, isThinking = false }) {
                 bgcolor: isBot ? 'white' : '#566497'
               },
               '& p': {
-                margin: '0.5em 0',
+                margin: '0.25em 0',
               },
               '& strong': {
                 fontWeight: 600,
               },
               '& ul, & ol': {
-                margin: '0.5em 0',
+                margin: '0.25em 0',
                 paddingLeft: '1.5em',
               },
               '& li': {
-                margin: '0.25em 0',
+                margin: '0.125em 0',
               }
             }}
           >
