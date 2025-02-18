@@ -3,7 +3,7 @@ import json
 from datetime import date
 
 # Specify the file path
-file_path = 'fanduel_data.json'
+file_path = 'oddsapi_raw_data.json'
 
 # Open and load the JSON file
 with open(file_path, 'r') as file:

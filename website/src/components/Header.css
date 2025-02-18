@@ -1,0 +1,103 @@
+/* Updated Header.css */
+
+.header {
+  background: linear-gradient(90deg, #2196f3 0%, #64b5f6 100%) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  color: white;             /* White text on blue for good contrast */
+  border-bottom: none;        /* Removed bottom border if you had one */
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem !important;
+  min-height: 70px; /* Slightly taller header for more prominence */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Slightly increased gap */
+}
+
+.logo {
+  height: 48px;  /* Increased from 42px */
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+/* Title Styling */
+.title {
+  font-weight: 700;      /* Bolder title to stand out */
+  font-size: 1.4rem;      /* Larger title font size */
+  letter-spacing: 1px;    /* Increased letter spacing */
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+  color: white;          /* White title text to contrast with blue header */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 25px; /* Increased gap between buttons */
+}
+
+.nav-button {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2px !important;
+  padding: 8px 20px !important;  /* Increased padding */
+  font-size: 1.05rem !important;  /* Increased from 0.95rem */
+  transition: all 0.2s ease !important;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px !important;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.3); /* Lighten border on hover */
+}
+
+.icon {
+  font-size: 1.6rem;      /* Slightly larger icon size */
+  color: white;          /* White icon color */
+  opacity: 1;           /* Icons at full opacity */
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 0 15px;
+    min-height: 60px;
+  }
+
+  .logo {
+    height: 42px;  /* Adjusted mobile logo size */
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .nav-buttons {
+    gap: 15px;
+  }
+
+  .nav-button {
+    font-size: 1rem !important;
+    padding: 6px 16px !important;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
+}

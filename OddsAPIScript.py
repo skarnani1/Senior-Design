@@ -50,7 +50,7 @@ else:
     print('Used requests', odds_response.headers['x-requests-used'])
 
     # Specify the filename
-    filename = "fanduel_data.json"
+    filename = "oddsapi_raw_data.json"
 
     # Write JSON data to a new file
     with open(filename, "w") as file:
