@@ -11,6 +11,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import ProbabilisticModeling from './components/ProbabilisticModeling'; // Import the new component
 
 // Layout with both header and footer
 const DefaultLayout = ({ children }) => (
@@ -38,58 +39,20 @@ function App() {
     <Router>
       <Routes>
         {/* Routes that need both header and footer */}
-        <Route path="/" element={
-          <DefaultLayout>
-            <Home />
-          </DefaultLayout>
-        } />
-        <Route path="/dashboard" element={
-          <DefaultLayout>
-            <Dashboard />
-          </DefaultLayout>
-        } />
-        {/* <Route path="/arbitrage" element={
-          <DefaultLayout>
-            <Arbitrage />
-          </DefaultLayout>
-        } /> */}
-        <Route path="/bonus-bets-calculator" element={
-          <DefaultLayout>
-            <BonusBetsCalculator />
-          </DefaultLayout>
-        } />
-        <Route path="/profile" element={
-          <DefaultLayout>
-            <Profile />
-          </DefaultLayout>
-        } />
-        <Route path="/about" element={
-          <DefaultLayout>
-            <About />
-          </DefaultLayout>
-        } />
-        <Route path="/contact" element={
-          <DefaultLayout>
-            <Contact />
-          </DefaultLayout>
-        } />
-        <Route path="/terms-of-service" element={
-          <DefaultLayout>
-            <TermsOfService />
-          </DefaultLayout>
-        } />
-        <Route path="/privacy-policy" element={
-          <DefaultLayout>
-            <PrivacyPolicy />
-          </DefaultLayout>
-        } />
+        <Route path="/" element={<DefaultLayout><Home /></DefaultLayout>} />
+        <Route path="/dashboard" element={<DefaultLayout><Dashboard /></DefaultLayout>} />
+        <Route path="/bonus-bets-calculator" element={<DefaultLayout><BonusBetsCalculator /></DefaultLayout>} />
+        <Route path="/profile" element={<DefaultLayout><Profile /></DefaultLayout>} />
+        <Route path="/about" element={<DefaultLayout><About /></DefaultLayout>} />
+        <Route path="/contact" element={<DefaultLayout><Contact /></DefaultLayout>} />
+        <Route path="/terms-of-service" element={<DefaultLayout><TermsOfService /></DefaultLayout>} />
+        <Route path="/privacy-policy" element={<DefaultLayout><PrivacyPolicy /></DefaultLayout>} />
+
+        {/* New route for Probabilistic Modeling */}
+        <Route path="/probabilistic-modeling" element={<HeaderOnlyLayout><ProbabilisticModeling /></HeaderOnlyLayout>} />
 
         {/* Routes that only need header */}
-        <Route path="/betgpt" element={
-          <HeaderOnlyLayout>
-            <BetGPT />
-          </HeaderOnlyLayout>
-        } />
+        <Route path="/betgpt" element={<HeaderOnlyLayout><BetGPT /></HeaderOnlyLayout>} />
       </Routes>
     </Router>
   );

@@ -22,12 +22,29 @@ const fetchOddsData = async () => {
       }
     );
 
-    console.log('Number of events:', response.data.length);
-    return response.data; // Return the JSON data
+    console.log('✅ Number of events:', response.data.length);
+
+    // Send this data to Flask API for CSV writing
+    sendOddsToFlask(response.data);
+
+    return response.data; // Keep original functionality
   } catch (error) {
-    console.error('Failed to fetch odds:', error.message);
+    console.error('❌ Failed to fetch odds:', error.message);
     throw error;
   }
 };
+
+// 📌 Send Odds Data to Flask API to Write CSV
+const sendOddsToFlask = async (oddsData) => {
+  try {
+    await axios.post('http://127.0.0.1:5000/update-odds-csv', { oddsData });
+    console.log('✅ Odds data sent to Flask for CSV writing');
+  } catch (error) {
+    console.error('❌ Failed to send odds data to Flask:', error.message);
+  }
+};
+
+// Run function
+fetchOddsData();
 
 export default fetchOddsData;

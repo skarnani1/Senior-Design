@@ -43,16 +43,15 @@ function Header() {
                     </Box>
                 </Box>
 
-                {/* Navigation Buttons on the Right */}
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Button color="inherit" component={Link} to="/dashboard" className="nav-button" sx={{ textTransform: 'none' }}>
                         Dashboard
                     </Button>
-                    {/* <Button color="inherit" component={Link} to="/arbitrage" className="nav-button" sx={{ textTransform: 'none' }}>
-                        Arbitrage
-                    </Button> */}
                     <Button color="inherit" component={Link} to="/bonus-bets-calculator" className="nav-button" sx={{ textTransform: 'none' }}>
                         Bonus Bets Calculator
+                    </Button>
+                    <Button color="inherit" component={Link} to="/probabilistic-modeling" className="nav-button" sx={{ textTransform: 'none' }}>
+                        Probabilistic Modeling
                     </Button>
                     <Button color="inherit" component={Link} to="/betgpt" className="nav-button" sx={{ textTransform: 'none' }}>
                         <Insights sx={{ marginRight: 0.5 }} />
