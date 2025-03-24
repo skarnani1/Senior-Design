@@ -11,7 +11,14 @@ CORS(app)
 s3 = boto3.client("s3")
 S3_BUCKET_NAME = "combined-odds"  # Ensure this is the correct bucket name
 S3_CSV_FILE = "OddsAPI_combined_odds-2.csv"
-LOCAL_CSV_PATH = "/Users/dewaynebarnes/Downloads/Projects/Senior-Design/OddsAPI_combined_odds_2.csv"
+
+# Construct relative path for local CSV
+# Get the directory of the current script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Create a 'csv_data' directory in the same directory as app.py
+CSV_DIR = os.path.join(BASE_DIR, 'csv_data')
+# CSV file path inside csv_data directory
+LOCAL_CSV_PATH = os.path.join(CSV_DIR, "OddsAPI_combined_odds_2.csv")
 
 # AWS DynamoDB Configuration
 dynamodb = boto3.resource("dynamodb", region_name="us-east-1")
@@ -19,6 +26,8 @@ nfl_table = dynamodb.Table("NFL_EloRatings")
 nba_table = dynamodb.Table("NBA_EloRatings")
 
 # Convert American odds to implied probability
+
+
 def convert_odds_to_prob(odds):
     if odds > 0:
         return 100 / (odds + 100)
@@ -26,6 +35,8 @@ def convert_odds_to_prob(odds):
         return abs(odds) / (abs(odds) + 100)
 
 # Fetch ELO ratings from DynamoDB
+
+
 def get_elo_rating(team_name, sport):
     """
     Fetches the ELO rating for a given team by extracting the relevant part of the team name.
@@ -53,10 +64,12 @@ def get_elo_rating(team_name, sport):
 
     # Extract the relevant part of the team name
     if sport == "NBA":
-        last_word = team_name_mapping.get(team_name, team_name.split()[-1])  # Use last word for NBA
+        last_word = team_name_mapping.get(
+            team_name, team_name.split()[-1])  # Use last word for NBA
     elif sport == "NFL":
         first_word = team_name.split()[0]  # Use first word for NFL
-        last_word = team_name_mapping.get(team_name, first_word)  # Map if special case exists
+        last_word = team_name_mapping.get(
+            team_name, first_word)  # Map if special case exists
     else:
         print(f"⚠️ Unknown sport type: {sport}")
         return None
@@ -69,7 +82,7 @@ def get_elo_rating(team_name, sport):
 
     if "Item" in response:
         return float(response["Item"]["Elo"])
-    
+
     # Debugging print statement
     print(f"⚠️ No ELO found for {team_name} ({last_word}) in {sport}!")
     return None
@@ -77,6 +90,9 @@ def get_elo_rating(team_name, sport):
 
 # Download CSV from S3
 def download_csv_from_s3():
+    # Ensure the directory exists
+    os.makedirs(CSV_DIR, exist_ok=True)
+
     try:
         print(f"⬇️ Downloading latest CSV from S3: {S3_CSV_FILE}")
         s3.download_file(S3_BUCKET_NAME, S3_CSV_FILE, LOCAL_CSV_PATH)
@@ -90,6 +106,8 @@ def download_csv_from_s3():
         print(f"❌ Error downloading CSV from S3: {e}")
 
 # Load and filter the latest moneyline bets from the CSV
+
+
 def load_moneyline_bets():
     download_csv_from_s3()  # Ensure we have the latest file
 
@@ -116,6 +134,8 @@ def load_moneyline_bets():
         return []
 
 # Update CSV via API request
+
+
 @app.route("/update-odds-csv", methods=["POST"])
 def update_odds_csv():
     try:
@@ -151,7 +171,8 @@ def update_odds_csv():
 
         print(f"📁 Attempting to write CSV at: {LOCAL_CSV_PATH}")
         df.to_csv(LOCAL_CSV_PATH, index=False)
-        print(f"✅ File successfully written: {LOCAL_CSV_PATH} with {len(df)} rows")
+        print(
+            f"✅ File successfully written: {LOCAL_CSV_PATH} with {len(df)} rows")
 
         return jsonify({"message": "CSV updated successfully", "rows": len(df)})
     except Exception as e:
@@ -159,6 +180,8 @@ def update_odds_csv():
         return jsonify({"error": str(e)}), 500
 
 # Find mispriced odds
+
+
 @app.route("/find-mispriced-odds", methods=["GET"])
 def find_mispriced_odds():
     moneyline_bets = load_moneyline_bets()
@@ -169,7 +192,8 @@ def find_mispriced_odds():
         team1_elo = get_elo_rating(bet["team1"], bet["sport"])
         team2_elo = get_elo_rating(bet["team2"], bet["sport"])
 
-        print(f"Processing bet: {bet['team1']} vs {bet['team2']} | Odds: {bet['odds']} | Sportsbook: {bet['sportsbookName']}")
+        print(
+            f"Processing bet: {bet['team1']} vs {bet['team2']} | Odds: {bet['odds']} | Sportsbook: {bet['sportsbookName']}")
         print(f"  -> Team1 ELO: {team1_elo}, Team2 ELO: {team2_elo}")
 
         if team1_elo and team2_elo:
@@ -181,7 +205,8 @@ def find_mispriced_odds():
 
             # Calculate the difference
             difference = intrinsic_win_prob - odd_win_prob
-            print(f"  -> Intrinsic Win Prob: {intrinsic_win_prob:.3f}, Odds Win Prob: {odd_win_prob:.3f}, Diff: {difference:.3f}")
+            print(
+                f"  -> Intrinsic Win Prob: {intrinsic_win_prob:.3f}, Odds Win Prob: {odd_win_prob:.3f}, Diff: {difference:.3f}")
 
             # Only include bets where the intrinsic probability is at least 10% greater
             if difference >= threshold:
@@ -195,12 +220,14 @@ def find_mispriced_odds():
                     "intrinsic_win_prob": intrinsic_win_prob,
                     "difference": difference
                 })
-                print(f"✅ Mispriced bet found: {bet['team1']} with difference {difference:.3f}")
+                print(
+                    f"✅ Mispriced bet found: {bet['team1']} with difference {difference:.3f}")
 
     # Sort by difference in descending order
     mispriced = sorted(mispriced, key=lambda x: x["difference"], reverse=True)
 
     return jsonify(mispriced)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
