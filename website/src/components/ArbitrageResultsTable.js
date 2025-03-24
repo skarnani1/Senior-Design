@@ -1,10 +1,10 @@
-// ResultsTable.js
+// ArbitrageResultsTable.js
 import React, { useState, useMemo } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel, Box, Tooltip } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-function ResultsTable({ data, title, filterText }) { // Added filterText prop
+function ArbitrageResultsTable({ data, title }) {
     const [sortBy, setSortBy] = useState(null);
     const [sortOrder, setSortOrder] = useState('asc');
 
@@ -14,27 +14,12 @@ function ResultsTable({ data, title, filterText }) { // Added filterText prop
         setSortBy(property);
     };
 
-    const filteredData = useMemo(() => { // Apply filter before sorting
-        if (!filterText) {
+    const sortedData = useMemo(() => {
+        if (!sortBy) {
             return data;
         }
 
-        const lowerFilterText = filterText.toLowerCase();
-        return data.filter(row => {
-            return Object.values(row).some(value => {
-                if (value === null || value === undefined) return false; // Handle null or undefined values
-                return String(value).toLowerCase().includes(lowerFilterText);
-            });
-        });
-    }, [data, filterText]);
-
-
-    const sortedData = useMemo(() => {
-        if (!sortBy) {
-            return filteredData; // Sort filtered data
-        }
-
-        return [...filteredData].sort((a, b) => { // Sort filtered data
+        return [...data].sort((a, b) => {
             let comparison = 0;
 
             const getValue = (row, path) => { // Helper function to get nested values
@@ -44,7 +29,7 @@ function ResultsTable({ data, title, filterText }) { // Added filterText prop
             const aValue = getValue(a, sortBy);
             const bValue = getValue(b, sortBy);
 
-            if (sortBy === 'odds' || sortBy === 'dateOfGame') { // Numeric or Date fields
+            if (sortBy === 'percent' || sortBy === 'row1.odds' || sortBy === 'row2.odds') { // Numeric fields
                 const numA = Number(aValue);
                 const numB = Number(bValue);
 
@@ -70,43 +55,46 @@ function ResultsTable({ data, title, filterText }) { // Added filterText prop
 
             return sortOrder === 'asc' ? comparison : comparison * -1;
         });
-    }, [filteredData, sortBy, sortOrder]); // Depend on filteredData
-
+    }, [data, sortBy, sortOrder]);
 
     const headerCells = [
-        { id: 'sport', label: 'Sport', tooltip: 'Sport of the event (e.g., NBA, NFL)' },
-        { id: 'sportsbookName', label: 'Sportsbook', tooltip: 'Name of the Sportsbook providing the odds' },
-        { id: 'dateOfGame', label: 'Date', tooltip: 'Date and Time of the game' },
-        { id: 'team1', label: 'Team 1', tooltip: 'Name of the first team' },
-        { id: 'team2', label: 'Team 2', tooltip: 'Name of the second team' },
-        { id: 'betType', label: 'Bet Type', tooltip: 'Type of bet (e.g., Moneyline, Spread)' },
-        { id: 'betInfo', label: 'Bet Info', tooltip: 'Specific details of the bet (e.g., Team to win, Point Spread)' },
-        { id: 'odds', label: 'Odds', tooltip: 'Decimal odds for the bet' },
-        // Add more headers as needed based on your data structure and tooltips
+        { id: 'percent', label: 'Percent', tooltip: 'Percentage return from the arbitrage opportunity' },
+        { id: 'row1.team1', label: 'Team 1 (Row 1)', tooltip: 'Team 1 for the first bet in the arbitrage' },
+        { id: 'row1.team2', label: 'Team 2 (Row 1)', tooltip: 'Team 2 for the first bet in the arbitrage' },
+        { id: 'row1.betType', label: 'Bet Type (Row 1)', tooltip: 'Bet type for the first bet (e.g., Moneyline, Spread)' },
+        { id: 'row1.betInfo', label: 'Bet Info (Row 1)', tooltip: 'Specific bet information for the first bet' },
+        { id: 'row1.odds', label: 'Odds (Row 1)', tooltip: 'Odds for the first bet' },
+        { id: 'row1.sportsbookName', label: 'Sportsbook (Row 1)', tooltip: 'Sportsbook for the first bet' },
+        { id: 'row1.sport', label: 'Sport (Row 1)', tooltip: 'Sport for the first bet' },
+        { id: 'row2.team1', label: 'Team 1 (Row 2)', tooltip: 'Team 1 for the second bet in the arbitrage' },
+        { id: 'row2.team2', label: 'Team 2 (Row 2)', tooltip: 'Team 2 for the second bet in the arbitrage' },
+        { id: 'row2.betType', label: 'Bet Type (Row 2)', tooltip: 'Bet type for the second bet' },
+        { id: 'row2.betInfo', label: 'Bet Info (Row 2)', tooltip: 'Specific bet information for the second bet' },
+        { id: 'row2.odds', label: 'Odds (Row 2)', tooltip: 'Odds for the second bet' },
+        { id: 'row2.sportsbookName', label: 'Sportsbook (Row 2)', tooltip: 'Sportsbook for the second bet' },
+        { id: 'row2.sport', label: 'Sport (Row 2)', tooltip: 'Sport for the second bet' },
     ];
 
     if (!data || data.length === 0) {
-        return <Box mt={2} textAlign="center">No data available.</Box>;
+        return <Box mt={2} textAlign="center">No arbitrage opportunities detected.</Box>;
     }
 
     return (
         <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
             <Table aria-label={`${title} table`}>
                 <TableHead>
-                    <TableRow sx={{ backgroundColor: "#1976d2" }}>
+                    <TableRow>
                         {headerCells.map((header) => (
                             <TableCell
                                 key={header.id}
                                 sortDirection={sortBy === header.id ? sortOrder : false}
-                                sx={{ fontWeight: "bold", color: "white", textAlign: "center" }}
                             >
                                 <Tooltip title={header.tooltip} placement="top" arrow> {/* Added Tooltip here */}
                                     <TableSortLabel
                                         active={sortBy === header.id}
                                         direction={sortBy === header.id ? sortOrder : 'asc'}
                                         onClick={() => handleSort(header.id)}
-                                        IconComponent={({ direction }) => direction === 'desc' ? <ArrowDownwardIcon sx={{ color: 'white' }} /> : <ArrowUpwardIcon sx={{ color: 'white' }} />}
-                                        sx={{color: 'inherit', '&:focus': { color: 'inherit' }} }
+                                        IconComponent={({ direction }) => direction === 'desc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
                                     >
                                         {header.label}
                                     </TableSortLabel>
@@ -119,17 +107,23 @@ function ResultsTable({ data, title, filterText }) { // Added filterText prop
                     {sortedData.map((row, index) => (
                         <TableRow
                             key={index}
-                            sx={{ '&:nth-of-type(odd)': { backgroundColor: '#f5f5f5' } }}
+                            sx={{ '&:nth-of-type(odd)': { backgroundColor: 'rgba(0, 0, 0, 0.04)' } }}
                         >
-                            <TableCell>{row.sport}</TableCell>
-                            <TableCell>{row.sportsbookName}</TableCell>
-                            <TableCell>{row.dateOfGame}</TableCell>
-                            <TableCell>{row.team1}</TableCell>
-                            <TableCell>{row.team2}</TableCell>
-                            <TableCell>{row.betType}</TableCell>
-                            <TableCell>{row.betInfo}</TableCell>
-                            <TableCell>{row.odds}</TableCell>
-                            {/* Render more cells based on your data structure */}
+                            <TableCell>{row.percent.toFixed(2)}%</TableCell>
+                            <TableCell>{row.row1.team1}</TableCell>
+                            <TableCell>{row.row1.team2}</TableCell>
+                            <TableCell>{row.row1.betType}</TableCell>
+                            <TableCell>{row.row1.betInfo}</TableCell>
+                            <TableCell>{row.row1.odds}</TableCell>
+                            <TableCell>{row.row1.sportsbookName}</TableCell>
+                            <TableCell>{row.row1.sport}</TableCell>
+                            <TableCell>{row.row2.team1}</TableCell>
+                            <TableCell>{row.row2.team2}</TableCell>
+                            <TableCell>{row.row2.betType}</TableCell>
+                            <TableCell>{row.row2.betInfo}</TableCell>
+                            <TableCell>{row.row2.odds}</TableCell>
+                            <TableCell>{row.row2.sportsbookName}</TableCell>
+                            <TableCell>{row.row2.sport}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
@@ -138,4 +132,4 @@ function ResultsTable({ data, title, filterText }) { // Added filterText prop
     );
 }
 
-export default ResultsTable;
+export default ArbitrageResultsTable;

@@ -11,7 +11,7 @@ CORS(app)
 s3 = boto3.client("s3")
 S3_BUCKET_NAME = "combined-odds"  # Ensure this is the correct bucket name
 S3_CSV_FILE = "OddsAPI_combined_odds-2.csv"
-LOCAL_CSV_PATH = "/Users/shivkarnani/Senior-Design/OddsAPI_combined_odds_2.csv"
+LOCAL_CSV_PATH = "/Users/dewaynebarnes/Downloads/Projects/Senior-Design/OddsAPI_combined_odds_2.csv"
 
 # AWS DynamoDB Configuration
 dynamodb = boto3.resource("dynamodb", region_name="us-east-1")

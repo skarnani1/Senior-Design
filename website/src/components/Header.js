@@ -57,10 +57,6 @@ function Header() {
                         <Insights sx={{ marginRight: 0.5 }} />
                         BetGPT
                     </Button>
-                    <Button color="inherit" component={Link} to="/profile" className="nav-button" sx={{ textTransform: 'none' }}>
-                        <AccountCircle sx={{ marginRight: 0.5 }} />
-                        Profile
-                    </Button>
                 </Box>
             </Toolbar>
         </AppBar>

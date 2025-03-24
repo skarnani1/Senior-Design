@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Typography, TextField, Button, Paper, Grid, Box } from '@mui/material';
-
+import { Container, Typography, TextField, Button, Paper, Grid, Box, Tooltip } from '@mui/material'; // Import Tooltip
 function BonusBetsCalculator() {
     const [bonusBetAmount, setBonusBetAmount] = useState('');
     const [odds1, setOdds1] = useState('');
@@ -46,11 +45,9 @@ function BonusBetsCalculator() {
         // Basic placeholder calculation - **REPLACE WITH YOUR ACTUAL BONUS BET CALCULATION LOGIC**
         const amount = parseFloat(bonusBetAmountComplex);
         const odd1 = parseFloat(odds1Complex);
-        const odd2 = parseFloat(odds2Complex);        
+        const odd2 = parseFloat(odds2Complex);
         const odd3 = parseFloat(odds3Complex);
         const odd4 = parseFloat(odds4Complex);
-
-
 
         if (isNaN(amount) || isNaN(odd1) || isNaN(odd2)) {
             setCalculationError("Please enter valid numbers for all fields.");
@@ -88,36 +85,42 @@ function BonusBetsCalculator() {
                 <Typography variant="h5" gutterBottom>Simple Bonus Bet</Typography>
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Bonus Bet Amount"
-                            value={bonusBetAmount}
-                            onChange={(e) => setBonusBetAmount(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                        />
+                        <Tooltip title="Enter the amount of the bonus bet you received." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Bonus Bet Amount"
+                                value={bonusBetAmount}
+                                onChange={(e) => setBonusBetAmount(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Sportsbook 1 Odds (Bonus Bet)"
-                            value={odds1}
-                            onChange={(e) => setOdds1(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                            placeholder="e.g., 2.0 for decimal odds"
-                        />
+                        <Tooltip title="Enter the decimal odds for the bet you will place with the bonus bet." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Sportsbook 1 Odds (Bonus Bet)"
+                                value={odds1}
+                                onChange={(e) => setOdds1(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                                placeholder="e.g., 2.0 for decimal odds"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Sportsbook 2 Odds (Lay Bet)"
-                            value={odds2}
-                            onChange={(e) => setOdds2(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                            placeholder="e.g., 1.9 for decimal odds"
-                        />
+                        <Tooltip title="Enter the decimal odds for the lay bet you will place at an exchange (e.g., Betfair)." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Sportsbook 2 Odds (Lay Bet)"
+                                value={odds2}
+                                onChange={(e) => setOdds2(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                                placeholder="e.g., 1.9 for decimal odds"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} sx={{ textAlign: 'right' }}>
                         <Button variant="contained" color="primary" onClick={handleCalculate}>
@@ -138,61 +141,71 @@ function BonusBetsCalculator() {
                 )}
 
                 <Typography variant="h5" gutterBottom>Money Back Bonus Bet</Typography>
-             
+
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Bonus Bet Amount"
-                            value={bonusBetAmountComplex}
-                            onChange={(e) => setBonusBetAmountComplex(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                        />
+                        <Tooltip title="Enter the amount of the bonus bet you received for the Money Back offer." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Bonus Bet Amount"
+                                value={bonusBetAmountComplex}
+                                onChange={(e) => setBonusBetAmountComplex(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Sportsbook 1 Odds (Bonus Bet)"
-                            value={odds1Complex}
-                            onChange={(e) => setOdds1Complex(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                            placeholder="e.g., 2.0 for decimal odds"
-                        />
+                        <Tooltip title="Enter the decimal odds for the first bet you will place with the bonus bet." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Sportsbook 1 Odds (Bonus Bet)"
+                                value={odds1Complex}
+                                onChange={(e) => setOdds1Complex(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                                placeholder="e.g., 2.0 for decimal odds"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Sportsbook 2 Odds (Lay Bet 1)"
-                            value={odds2Complex}
-                            onChange={(e) => setOdds2Complex(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                            placeholder="e.g., 1.9 for decimal odds"
-                        />
+                        <Tooltip title="Enter the decimal odds for the first lay bet you will place at an exchange." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Sportsbook 2 Odds (Lay Bet 1)"
+                                value={odds2Complex}
+                                onChange={(e) => setOdds2Complex(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                                placeholder="e.g., 1.9 for decimal odds"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Sportsbook 3 Odds (Bonus Bet)"
-                            value={odds3Complex}
-                            onChange={(e) => setOdds3Complex(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                            placeholder="e.g., 2.0 for decimal odds"
-                        />
+                        <Tooltip title="Enter the decimal odds for the second bet you will place with the bonus bet (to trigger the money back)." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Sportsbook 3 Odds (Bonus Bet)"
+                                value={odds3Complex}
+                                onChange={(e) => setOdds3Complex(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                                placeholder="e.g., 2.0 for decimal odds"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <TextField
-                            fullWidth
-                            label="Sportsbook 4 Odds (Lay Bet 2)"
-                            value={odds4Complex}
-                            onChange={(e) => setOdds4Complex(e.target.value)}
-                            type="number"
-                            variant="outlined"
-                            placeholder="e.g., 1.9 for decimal odds"
-                        />
+                        <Tooltip title="Enter the decimal odds for the second lay bet you will place at an exchange." placement="top" arrow>
+                            <TextField
+                                fullWidth
+                                label="Sportsbook 4 Odds (Lay Bet 2)"
+                                value={odds4Complex}
+                                onChange={(e) => setOdds4Complex(e.target.value)}
+                                type="number"
+                                variant="outlined"
+                                placeholder="e.g., 1.9 for decimal odds"
+                            />
+                        </Tooltip>
                     </Grid>
                     <Grid item xs={12} sx={{ textAlign: 'right' }}>
                         <Button variant="contained" color="primary" onClick={handleCalculateComplex}>
