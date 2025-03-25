@@ -1,6 +1,18 @@
 // ArbitrageResultsTable.js
 import React, { useState, useMemo } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TableSortLabel, Box, Tooltip } from '@mui/material';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Paper,
+    TableSortLabel,
+    Box,
+    Tooltip,
+    Typography // Import Typography if not already imported
+} from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
@@ -76,20 +88,25 @@ function ArbitrageResultsTable({ data, title }) {
     ];
 
     if (!data || data.length === 0) {
-        return <Box mt={2} textAlign="center">No arbitrage opportunities detected.</Box>;
+        return <Box mt={2} textAlign="center"><Typography variant="body1" color="textSecondary">No arbitrage opportunities detected.</Typography></Box>;
     }
 
     return (
-        <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
-            <Table aria-label={`${title} table`}>
-                <TableHead>
+        <TableContainer component={Paper} sx={{ overflowX: 'auto', boxShadow: 2 }}> {/* Added boxShadow for elevation */}
+            <Table aria-label={`${title} table`} size="small"> {/* Made table size small for density */}
+                <TableHead sx={{ bgcolor: 'primary.light' }}> {/* Light background for header */}
                     <TableRow>
                         {headerCells.map((header) => (
                             <TableCell
                                 key={header.id}
                                 sortDirection={sortBy === header.id ? sortOrder : false}
+                                sx={{
+                                    fontWeight: 'bold', // Bold header text
+                                    padding: '8px 16px', // Adjust header cell padding
+                                    whiteSpace: 'nowrap', // Prevent header text wrapping
+                                }}
                             >
-                                <Tooltip title={header.tooltip} placement="top" arrow> {/* Added Tooltip here */}
+                                <Tooltip title={header.tooltip} placement="top" arrow>
                                     <TableSortLabel
                                         active={sortBy === header.id}
                                         direction={sortBy === header.id ? sortOrder : 'asc'}
@@ -107,23 +124,25 @@ function ArbitrageResultsTable({ data, title }) {
                     {sortedData.map((row, index) => (
                         <TableRow
                             key={index}
-                            sx={{ '&:nth-of-type(odd)': { backgroundColor: 'rgba(0, 0, 0, 0.04)' } }}
+                            sx={{
+                                '&:nth-of-type(odd)': { backgroundColor: 'rgba(0, 0, 0, 0.04)' },
+                            }}
                         >
-                            <TableCell>{row.percent.toFixed(2)}%</TableCell>
-                            <TableCell>{row.row1.team1}</TableCell>
-                            <TableCell>{row.row1.team2}</TableCell>
-                            <TableCell>{row.row1.betType}</TableCell>
-                            <TableCell>{row.row1.betInfo}</TableCell>
-                            <TableCell>{row.row1.odds}</TableCell>
-                            <TableCell>{row.row1.sportsbookName}</TableCell>
-                            <TableCell>{row.row1.sport}</TableCell>
-                            <TableCell>{row.row2.team1}</TableCell>
-                            <TableCell>{row.row2.team2}</TableCell>
-                            <TableCell>{row.row2.betType}</TableCell>
-                            <TableCell>{row.row2.betInfo}</TableCell>
-                            <TableCell>{row.row2.odds}</TableCell>
-                            <TableCell>{row.row2.sportsbookName}</TableCell>
-                            <TableCell>{row.row2.sport}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.percent.toFixed(2)}%</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row1.team1}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row1.team2}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row1.betType}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row1.betInfo}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', textAlign: 'right', whiteSpace: 'nowrap' }}>{row.row1.odds}</TableCell> {/* Right align odds */}
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row1.sportsbookName}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row1.sport}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row2.team1}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row2.team2}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row2.betType}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row2.betInfo}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', textAlign: 'right', whiteSpace: 'nowrap' }}>{row.row2.odds}</TableCell> {/* Right align odds */}
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row2.sportsbookName}</TableCell>
+                            <TableCell sx={{ padding: '6px 16px', whiteSpace: 'nowrap' }}>{row.row2.sport}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

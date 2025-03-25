@@ -70,17 +70,31 @@ function Dashboard() {
     // Function to handle the entire scrape and upload process
     const handleScrapeNow = async () => {
         setLoading(true);
-        setScrapingStatus('scraping'); // Update scraping status
+        setScrapingStatus('scraping');
         try {
-            console.log(`Scraping data for sport: ${sport}, sportsbook: ${sportsbook}, on date: ${date}`);
-            console.log('Fetching data from the Odds API...');
-            setScrapingStatus('fetching'); // Update scraping status
+            console.log(`[Scrape Now] Starting...`);
+            setScrapingStatus('fetching');
             const oddsData = await fetchOddsData();
-            console.log('Processing JSON data into CSV...');
-            setScrapingStatus('processing'); // Update scraping status
+            console.log('[Scrape Now] Raw Odds Data:', oddsData);
+
+            if (!oddsData || oddsData.length === 0) {
+                console.warn(' No odds data returned. Skipping upload.');
+                setScrapingStatus('no-data');
+                return;
+            }
+
+            setScrapingStatus('processing');
             const csvData = processOddsData(oddsData);
-            console.log(`Uploading file "${key}" to bucket "${bucketName}".`);
-            setScrapingStatus('uploading'); // Update scraping status
+            console.log('[Scrape Now] Processed CSV:\n', csvData);
+
+            if (!csvData || csvData.trim() === '') {
+                console.warn(' CSV data is empty. Aborting upload.');
+                setScrapingStatus('empty-csv');
+                return;
+            }
+
+            console.log(`[Scrape Now] Uploading to S3: bucket="${bucketName}", key="${key}"`);
+            setScrapingStatus('uploading');
             await s3
                 .putObject({
                     Bucket: bucketName,
@@ -89,13 +103,14 @@ function Dashboard() {
                     ContentType: 'text/csv',
                 })
                 .promise();
-            setScrapingStatus('complete'); // Update scraping status
-            setLastScrapedTime(new Date()); // Update last scraped time
-            await fetchDataFromS3(); // Re-fetch data from S3 to update table
-            console.log('Scraping completed successfully!');
+
+            console.log("S3 Upload successful");
+            setScrapingStatus('complete');
+            setLastScrapedTime(new Date());
+            await fetchDataFromS3();
         } catch (error) {
-            console.error('Error during scraping:', error.message);
-            setScrapingStatus('error'); // Update scraping status to error
+            console.error('Error during scraping or S3 upload:', error.message);
+            setScrapingStatus('error');
         } finally {
             setLoading(false);
         }
@@ -139,69 +154,13 @@ function Dashboard() {
                 Live Odds and Arbitrage Dashboard
             </Typography>
 
-            {/* Scraping Controls Section */}
-            <Paper elevation={2} sx={{ p: 3, mb: 3 }}>
-                <Typography variant="h6" gutterBottom>
-                    Scrape Live Odds
-                </Typography>
-                <Grid container spacing={2} alignItems="center">
-                    <Grid item xs={12} md={3}>
-                        <FormControl fullWidth>
-                            <InputLabel id="sport-select-label">Sport to Scrape</InputLabel>
-                            <Select
-                                labelId="sport-select-label"
-                                value={sport}
-                                label="Sport to Scrape"
-                                onChange={(e) => setSport(e.target.value)}
-                            >
-                                {sportsOptions.map((sportOption) => (
-                                    <MenuItem key={sportOption} value={sportOption}>{sportOption}</MenuItem>
-                                ))}
-                            </Select>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={12} md={3}>
-                        <FormControl fullWidth>
-                            <InputLabel id="sportsbook-select-label">Sportsbook</InputLabel>
-                            <Select
-                                labelId="sportsbook-select-label"
-                                value={sportsbook}
-                                label="Sportsbook"
-                                onChange={(e) => setSportsbook(e.target.value)}
-                            >
-                                {sportsbookOptions.map((bookOption) => (
-                                    <MenuItem key={bookOption} value={bookOption}>{bookOption}</MenuItem>
-                                ))}
-                            </Select>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={12} md={3}>
-                        <TextField
-                            fullWidth
-                            label="Date"
-                            type="date"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
-                            InputLabelProps={{ shrink: true }}
-                        />
-                    </Grid>
-                    <Grid item xs={12} md={3} sx={{ textAlign: 'right' }}>
-                        <Button variant="contained" color="primary" onClick={handleScrapeNow} disabled={loading}>
-                            {loading  ? <CircularProgress size={24} /> : 'Scrape Now'}
-                        </Button>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant="body2" color="textSecondary">
-                            Scraping Status: {scrapingStatus}
-                            {lastScrapedTime && ` - Last Scraped: ${lastScrapedTime.toLocaleTimeString()}`}
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </Paper>
-
-
 
             {/* Arbitrage Detection Button */}
+            <Grid item xs={12} md={3} sx={{ textAlign: 'left' }}>
+                <Button variant="contained" color="primary" onClick={handleScrapeNow} disabled={loading}>
+                    {loading  ? <CircularProgress size={24} /> : 'Scrape Now'}
+                </Button>
+            </Grid>
             <Box sx={{ mb: 3, textAlign: 'right' }}>
                 <Tooltip title="Click to scan the current live odds data for potential arbitrage betting opportunities." placement="top" arrow>
                     <Button variant="contained" color="secondary" onClick={handleDetectArbitrage}>

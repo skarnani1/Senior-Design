@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const fetchOddsData = async () => {
-  const API_KEY = 'b00dcb637ff2c90f0acf59dd1bf7fbac'; // Replace with your API key
+  const API_KEY = '6448192984900355b8ceaf3388466e6b'; // Replace with your API key
   const SPORT = 'basketball_nba';
   const REGIONS = 'us';
   const MARKETS = 'h2h,spreads,totals';
