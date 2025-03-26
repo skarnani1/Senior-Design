@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "sportradar-basketball",
+      "source": "@sportradar-basketball/v5#1pra10lak0j489",
+      "integrity": "sha512-ITDP598vhCzByakUndZqJ7FPnSgHLFKt5P0bPrXM0URjg9PEEXlS6PPQ9eE3k8VAPDaAUS6LwUC9d9LCjeNxwg==",
+      "installerVersion": "6.1.3"
+    }
+  ]
+}
