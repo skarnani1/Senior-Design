@@ -41,7 +41,7 @@ function About() {
       role: 'User Experience & Front-End Development',
       background: "Computer and Information Science, Class of '25",
       hobbies: 'Basketball, Cooking',
-      description: 'Jason leads our UX design and front-end development, ensuring our platform is user-friendly and intuitive for all types of users.',
+      description: 'Jason is instrumental in developing our arbitrage detection tools and analytics, providing users with calculated and insightful betting options.',
       image: '/images/jason.jpeg'
     },
     {
@@ -57,7 +57,7 @@ function About() {
       role: 'Arbitrage Detection & Data Analytics',
       background: "Computer and Information Science & Chemistry, Class of '25",
       hobbies: 'Sitting, Trying New Foods',
-      description: 'Sarah is instrumental in developing our arbitrage detection tools and analytics, providing users with calculated and insightful betting options.',
+      description: 'Sarah leads our UX design and front-end development, ensuring our platform is user-friendly and intuitive for all types of users.',
       image: '/images/sarah.jpeg'
     },
   ];
